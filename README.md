@@ -1,6 +1,6 @@
 # Question
 
-Questions (and possible answers) for symptotrack.com.
+Questions (and possible answers) for symptotrack.org.
 
 ## Types & tags
 Types define the type of answers (boolean, string, etc). Tags define a subset and enable you to use prepopulated answers.
