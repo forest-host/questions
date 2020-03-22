@@ -2,14 +2,15 @@
   "name": "@symptotrack/questions",
   "version": "0.1.1",
   "description": "Questions for the symptomtracker",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/suprasoil/questions.git"
   },
   "scripts": {
     "test": "NODE_ENV=testing mocha --require @babel/register --bail --full-trace test/**/*.test.js",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
   },
   "author": "Hike, Greenberry & Forest.host",
   "license": "ISC",
