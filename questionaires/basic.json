@@ -31,19 +31,13 @@
         }
       ]
     },
-    "cough": {
+    "dry_cough": {
+      "type": "boolean"
+    },
+    "tired": {
       "type": "boolean"
     },
     "cough_slime": {
-      "type": "boolean",
-      "conditionals": [
-        {
-          "question": "cough",
-          "answer": "yes"
-        }
-      ]
-    },
-    "tired": {
       "type": "boolean"
     },
     "short_breath": {
