@@ -74,7 +74,7 @@
       "type": "boolean"
     },
     "social_distancing": {
-      "type: "boolean"
+      "type": "boolean"
     },
     "home_leaves": {
       "type": "number"
