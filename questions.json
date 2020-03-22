@@ -2,9 +2,6 @@
   "number": {
     "decimals": 0
   },
-  "select": {
-    
-  },
   "boolean": {
     "answers": {
       "yes": "Yes",
