@@ -1,0 +1,15 @@
+{
+  "name": "@symptotrack/questions",
+  "version": "0.1.0",
+  "description": "Questions for the symptomtracker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suprasoil/questions.git"
+  },
+  "author": "Hike, Greenberry & Forest.host",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suprasoil/questions/issues"
+  },
+  "homepage": "https://github.com/suprasoil/questions#readme"
+}
