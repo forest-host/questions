@@ -3,16 +3,10 @@
     "decimals": 0
   },
   "boolean": {
-    "answers": {
-      "yes": "Yes",
-      "no": "No",
-      "skip": "I don't know"
-    }
+    "answers": [ "yes", "no", "skip" ]
   },
   "multiselect": {
     "tag": "country",
-    "answers": {
-      "netherlands": "Nederland"
-    }
+    "answers": [ "NLD" ]
   }
 }

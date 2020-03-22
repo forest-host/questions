@@ -4,18 +4,13 @@
     "location": {
       "type": "coordinates"
     },
-    "date_of_birth": {
+    "year_of_birth": {
       "type": "number",
       "tag": "year"
     },
     "sex": {
       "type": "select",
-      "answers": {
-        "male": "Male",
-        "female": "Female",
-        "other": "Other",
-        "skip": "I rather not tell"
-      }
+      "answers": [ "male", "female", "other", "skip" ]
     },
     "fever": {
       "type": "boolean"

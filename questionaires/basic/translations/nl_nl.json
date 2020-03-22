@@ -1,0 +1,17 @@
+{
+  "location": {
+    "question": "Waar ben je nu?"
+  },
+  "year_of_birth": {
+    "question": "In welk jaar ben je geboren"
+  },
+  "sex": {
+    "question": "Wat is je geslacht",
+    "answers": {
+      "male": "Man",
+      "female": "Vrouw",
+      "other": "Anders",
+      "skip": "Zeg ik niet"
+    }
+  }
+}
