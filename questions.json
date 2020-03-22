@@ -1,0 +1,21 @@
+{
+  "number": {
+    "decimals": 0
+  },
+  "select": {
+    
+  },
+  "boolean": {
+    "answers": {
+      "yes": "Yes",
+      "no": "No",
+      "skip": "I don't know"
+    }
+  },
+  "multiselect": {
+    "tag": "country",
+    "answers": {
+      "netherlands": "Nederland"
+    }
+  }
+}
