@@ -6,7 +6,7 @@
     "answers": [ "yes", "no", "skip" ]
   },
   "multiselect": {
-    "tag": "country",
+    "variant": "country",
     "answers": [ "NLD" ]
   }
 }

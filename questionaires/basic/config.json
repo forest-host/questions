@@ -1,82 +1,84 @@
 {
   "name": "basic",
-  "questions": {
-    "location": {
-      "type": "coordinates"
-    },
-    "year_of_birth": {
-      "type": "number",
-      "tag": "year"
-    },
-    "sex": {
-      "type": "select",
-      "answers": [ "male", "female", "other", "skip" ]
-    },
-    "fever": {
-      "type": "boolean"
-    },
-    "fever_degrees": {
-      "type": "number",
-      "decimals": 1,
-      "tag": "temperature",
-      "conditionals": [
-        {
-          "question": "fever",
-          "answer": "yes"
-        }
-      ]
-    },
-    "dry_cough": {
-      "type": "boolean"
-    },
-    "tired": {
-      "type": "boolean"
-    },
-    "cough_slime": {
-      "type": "boolean"
-    },
-    "short_breath": {
-      "type": "boolean"
-    },
-    "muscle_ache": {
-      "type": "boolean"
-    },
-    "sore_throat": {
-      "type": "boolean"
-    },
-    "headache": {
-      "type": "boolean"
-    },
-    "chills": {
-      "type": "boolean"
-    },
-    "nauseous": {
-      "type": "boolean"
-    },
-    "other_symptoms": {
-      "type": "text"
-    },
-    "start_symptoms": {
-      "type": "date"
-    },
-    "first_symptom": {
-      "type": "text"
-    },
-    "contact_with_positively_tested_person": {
-      "type": "boolean"
-    },
-    "quarantined": {
-      "type": "boolean"
-    },
-    "social_distancing": {
-      "type": "boolean"
-    },
-    "home_leaves": {
-      "type": "number"
-    },
-    "travel_last_2_weeks": {
-      "type": "multiselect",
-      "tag": "country"
+  "groups": {
+    "symptoms": {
+      "location": {
+        "type": "coordinates"
+      },
+      "year_of_birth": {
+        "type": "number",
+        "variant": "year"
+      },
+      "sex": {
+        "type": "select",
+        "answers": [ "male", "female", "other", "skip" ]
+      },
+      "fever": {
+        "type": "boolean"
+      },
+      "fever_degrees": {
+        "type": "number",
+        "decimals": 1,
+        "variant": "temperature",
+        "conditionals": [
+          {
+            "question": "fever",
+            "answer": "yes"
+          }
+        ]
+      },
+      "dry_cough": {
+        "type": "boolean"
+      },
+      "tired": {
+        "type": "boolean"
+      },
+      "cough_slime": {
+        "type": "boolean"
+      },
+      "short_breath": {
+        "type": "boolean"
+      },
+      "muscle_ache": {
+        "type": "boolean"
+      },
+      "sore_throat": {
+        "type": "boolean"
+      },
+      "headache": {
+        "type": "boolean"
+      },
+      "chills": {
+        "type": "boolean"
+      },
+      "nauseous": {
+        "type": "boolean"
+      },
+      "other_symptoms": {
+        "type": "text"
+      },
+      "start_symptoms": {
+        "type": "date"
+      },
+      "first_symptom": {
+        "type": "text"
+      },
+      "contact_with_positively_tested_person": {
+        "type": "boolean"
+      },
+      "quarantined": {
+        "type": "boolean"
+      },
+      "social_distancing": {
+        "type": "boolean"
+      },
+      "home_leaves": {
+        "type": "number"
+      },
+      "travel_last_2_weeks": {
+        "type": "multiselect",
+        "variant": "country"
+      }
     }
   }
 }
