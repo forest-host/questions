@@ -2,9 +2,6 @@
   "float": {
     "decimals": 0
   },
-  "boolean": {
-    "options": [ "yes", "no", "skip" ]
-  },
   "multiselect": {
     "variants": {
       "country": {

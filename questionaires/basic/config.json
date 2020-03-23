@@ -4,14 +4,16 @@
     "symptoms": {
       "location": {
         "type": "coordinates"
+        "required": true
       },
       "year_of_birth": {
         "type": "integer",
         "variant": "year"
+        "required": true
       },
       "sex": {
         "type": "select",
-        "options": [ "male", "female", "other", "skip" ]
+        "options": [ "male", "female", "other" ]
       },
       "fever": {
         "type": "boolean"
