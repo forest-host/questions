@@ -6,7 +6,10 @@
     "options": [ "yes", "no", "skip" ]
   },
   "multiselect": {
-    "variant": "country",
-    "options": [ "NLD" ]
+    "variants": {
+      "country": {
+        "options": [ "NLD" ]
+      }
+    }
   }
 }
