@@ -3,10 +3,10 @@
     "decimals": 0
   },
   "boolean": {
-    "answers": [ "yes", "no", "skip" ]
+    "options": [ "yes", "no", "skip" ]
   },
   "multiselect": {
     "variant": "country",
-    "answers": [ "NLD" ]
+    "options": [ "NLD" ]
   }
 }

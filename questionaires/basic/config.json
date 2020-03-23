@@ -11,7 +11,7 @@
       },
       "sex": {
         "type": "select",
-        "answers": [ "male", "female", "other", "skip" ]
+        "options": [ "male", "female", "other", "skip" ]
       },
       "fever": {
         "type": "boolean"
@@ -23,7 +23,7 @@
         "conditionals": [
           {
             "question": "fever",
-            "answer": "yes"
+            "option": "yes"
           }
         ]
       },
