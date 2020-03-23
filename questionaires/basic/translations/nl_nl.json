@@ -2,23 +2,23 @@
   "groups": {
     "symptoms": {
       "title": "Wat zijn je symptomen",
-      "next_button": "Naar de volgende vragen"
+      "next": "Naar de volgende vragen"
     }
   },
   "questions": {
     "location": {
-      "question": "Waar ben je nu?"
+      "question": "Waar ben je nu?",
+      "skip": "weet ik niet"
     },
     "year_of_birth": {
       "question": "In welk jaar ben je geboren"
     },
     "sex": {
       "question": "Wat is je geslacht",
+      "other": "Anders",
       "answers": {
         "male": "Man",
-        "female": "Vrouw",
-        "other": "Anders",
-        "skip": "Zeg ik niet"
+        "female": "Vrouw"
       }
     }
   }

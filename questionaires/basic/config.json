@@ -13,7 +13,8 @@
       },
       "sex": {
         "type": "select",
-        "options": [ "male", "female", "other" ]
+        "other": true,
+        "options": [ "male", "female" ]
       },
       "fever": {
         "type": "boolean"
