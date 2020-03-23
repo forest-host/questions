@@ -2,9 +2,6 @@
   "name": "basic",
   "groups": {
     "symptoms": {
-      "location": {
-        "type": "coordinates"
-      },
       "year_of_birth": {
         "type": "integer",
         "variant": "year",
