@@ -6,7 +6,7 @@
         "type": "coordinates"
       },
       "year_of_birth": {
-        "type": "number",
+        "type": "integer",
         "variant": "year"
       },
       "sex": {
