@@ -1,6 +1,6 @@
 {
   "multiselect": {
-    "tag": "country",
+    "variant": "country",
     "answers": {
       "AFG": "Afghanistan",
       "ALB": "Albania",
