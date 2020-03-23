@@ -8,7 +8,7 @@ Default types and tags are defined in `defaults`
 If you add `other: true` to a question which adds the option `other` to the answers, this means a string can be passed in addition to the answer `other`.
 
 ### bool
-A boolean is true, false or skip (I don't know)
+A boolean is true or false
 Add `required: true` which will remove the skip option.
 
 ### coordinates
@@ -40,14 +40,18 @@ Every questionaire has a translation with the full questions, additional informa
 ## Questions and translations
 A question can be configured like this:
 ```
+"fever": {
+  "type": "boolean"
+}
+
 "fever_degrees": {
-  "type": "number",
+  "type": "float",
   "decimals": 1,
-  "tag": "temperature",
+  "variant": "temperature",
   "conditionals": [
     {
       "question": "fever",
-      "answer": "yes"
+      "option": true
     }
   ]
 }
