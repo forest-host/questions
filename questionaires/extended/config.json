@@ -1,0 +1,40 @@
+{
+  "name": "extended",
+  "groups": {
+    "symptoms": {
+      "fever_start": {
+        "type": "date"
+      },
+      "fever_suddenly": {
+        "type": "boolean"
+      },
+      "cough_severity": {
+        "type": "likert"
+      },
+      "fatigue_severity": {
+        "type": "likert"
+      },
+      "cough_slime_severity": {
+        "type": "likert"
+      },
+      "short_breath_severity": {
+        "type": "likert"
+      },
+      "muscle_ache_severity": {
+        "type": "likert"
+      },
+      "sore_throat_severity": {
+        "type": "likert"
+      },
+      "headache_severity": {
+        "type": "likert"
+      },
+      "chills_severity": {
+        "type": "likert"
+      },
+      "nauseous_severity": {
+        "type": "likert"
+      }
+    }
+  }
+}

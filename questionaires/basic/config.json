@@ -33,7 +33,7 @@
       "dry_cough": {
         "type": "boolean"
       },
-      "tired": {
+      "fatigue": {
         "type": "boolean"
       },
       "cough_slime": {

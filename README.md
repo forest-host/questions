@@ -61,6 +61,10 @@ To translate this to Dutch this question will be defined as (in `translations/nl
 ```
 "fever_degrees": {
   "question": "How warm are you? in Celcius"
+  // for all `required: false` (default) questions you can override the skip button text
+  "skip": "i don't know",
+  // for all `other: true` questions, you can override the other option text
+  "other": "Type your answer"
 }
 ```
 No additional answers are needed here since we ask for a number.
