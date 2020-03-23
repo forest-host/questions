@@ -75,7 +75,7 @@
       "home_leaves": {
         "type": "integer"
       },
-      "travel_last_2_weeks": {
+      "travel_last_weeks": {
         "type": "multiselect",
         "variant": "country"
       }
