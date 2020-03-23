@@ -17,7 +17,7 @@
         "type": "boolean"
       },
       "fever_degrees": {
-        "type": "number",
+        "type": "float",
         "decimals": 1,
         "variant": "temperature",
         "conditionals": [
@@ -73,7 +73,7 @@
         "type": "boolean"
       },
       "home_leaves": {
-        "type": "number"
+        "type": "integer"
       },
       "travel_last_2_weeks": {
         "type": "multiselect",
