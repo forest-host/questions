@@ -1,7 +1,13 @@
 {
   "integer": {
     "min": 0,
-    "max": 10
+    "max": 10,
+    "variants": {
+      "likert": {
+        "min": 0,
+        "max": 5
+      }
+    }
   },
   "float": {
     "decimals": 0

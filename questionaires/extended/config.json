@@ -9,31 +9,40 @@
         "type": "boolean"
       },
       "cough_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "fatigue_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "cough_slime_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "short_breath_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "muscle_ache_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "sore_throat_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "headache_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "chills_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       },
       "nauseous_severity": {
-        "type": "likert"
+        "type": "integer",
+        "variant": "likert"
       }
     },
     "social": {
