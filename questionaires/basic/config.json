@@ -3,12 +3,12 @@
   "groups": {
     "symptoms": {
       "location": {
-        "type": "coordinates"
+        "type": "coordinates",
         "required": true
       },
       "year_of_birth": {
         "type": "integer",
-        "variant": "year"
+        "variant": "year",
         "required": true
       },
       "sex": {
