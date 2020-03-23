@@ -9,7 +9,7 @@ If you add `other: true` to a question which adds the option `other` to the answ
 
 ### bool
 A boolean is true or false
-Add `required: true` which will remove the skip option.
+Add `required: false` which will add a skip option which can be translated
 
 ### coordinates
 
@@ -40,6 +40,12 @@ Every questionaire has a translation with the full questions, additional informa
 ## Questions and translations
 A question can be configured like this:
 ```
+"year_of_birth": {
+  "type": "integer",
+  "min": 1900,
+  "max": 2020
+},
+
 "fever": {
   "type": "boolean"
 }
@@ -61,7 +67,7 @@ To translate this to Dutch this question will be defined as (in `translations/nl
 ```
 "fever_degrees": {
   "question": "How warm are you? in Celcius"
-  // for all `required: false` (default) questions you can override the skip button text
+  // for all `required: false` questions you can override the skip button text
   "skip": "i don't know",
   // for all `other: true` questions, you can override the other option text
   "other": "Type your answer"
@@ -71,5 +77,5 @@ No additional answers are needed here since we ask for a number.
 
 
 ## TODO
-- Optional next button to group questions
-- Meta questions
+- Min/max for all integer questions
+- Meta questions?

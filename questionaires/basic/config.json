@@ -3,13 +3,13 @@
   "groups": {
     "symptoms": {
       "location": {
-        "type": "coordinates",
-        "required": true
+        "type": "coordinates"
       },
       "year_of_birth": {
         "type": "integer",
         "variant": "year",
-        "required": true
+        "min": 1900,
+        "max": 2020
       },
       "sex": {
         "type": "select",
@@ -22,6 +22,8 @@
       "fever_degrees": {
         "type": "float",
         "decimals": 1,
+        "min": 36.0,
+        "max": 41.0,
         "variant": "temperature",
         "conditionals": [
           {
@@ -31,10 +33,12 @@
         ]
       },
       "dry_cough": {
-        "type": "boolean"
+        "type": "boolean",
+        "required": false
       },
       "fatigue": {
-        "type": "boolean"
+        "type": "boolean",
+        "required": false
       },
       "cough_slime": {
         "type": "boolean"
@@ -76,7 +80,9 @@
         "type": "boolean"
       },
       "home_leaves": {
-        "type": "integer"
+        "type": "integer",
+        "min": 0,
+        "max": 10
       },
       "travel_last_weeks": {
         "type": "multiselect",

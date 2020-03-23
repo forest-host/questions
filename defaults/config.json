@@ -1,4 +1,8 @@
 {
+  "integer": {
+    "min": 0,
+    "max": 10
+  },
   "float": {
     "decimals": 0
   },
