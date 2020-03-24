@@ -151,6 +151,25 @@ Returns a array of questionaires found in repository
 ### `get_questionaire(name)`
 Returns a config object for questionaire, with defaults merged in for every question that did not specify some properties
 
-### `get_questionaire_translations(name)`
+### TODO - `get_questionaire_translations(name)`
 Returns a config object containing all translations for questionaire, with defaults merged in all unspecified keys
+
+### `validate(name, data)`
+Validate a data object based on the `name` questionaire
+
+This function will return a sanitized data object on success (with keys removed that are not part of the questionaire)
+
+It will throw a ValidationError on encountered errors, error tags are contained in the `fields` property of this error object
+
+```
+{
+  try {
+    validate('test', {});
+  } catch(err) {
+    assert.propertyVal(err.fields, 'year_of_birth', 'required');
+  }
+}
+```
+
+
 
