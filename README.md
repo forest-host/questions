@@ -48,9 +48,8 @@ A number without decimals
 ### float
 A number with decimals
 
-- `decimals`: number of decimals for number
-- `min`: minimal value that number can be
-- `max`: minimal value that number can be
+- `min`: minimal value that number can be, with decimals
+- `max`: minimal value that number can be, with decimals
 
 ### select
 A select question has multiple possible answers but only one answer can be given
@@ -101,7 +100,6 @@ Questions can be configured like this:
 
 "fever_degrees": {
   "type": "float",
-  "decimals": 1,
   "variant": "temperature",
   "conditionals": [
     {

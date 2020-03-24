@@ -21,7 +21,6 @@
       "fever_degrees": {
         "type": "float",
         "required": true,
-        "decimals": 1,
         "min": 36.0,
         "max": 41.0,
         "variant": "temperature",
