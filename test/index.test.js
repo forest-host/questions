@@ -31,6 +31,14 @@ describe('get_questionaire(name)', () => {
   })
 })
 
+describe('get_questionaire_locales(name)', () => {
+  it('should return a list of locales for questionaire', () => {
+    let locales = questions.get_questionaire_locales('basic');
+
+    assert.include(locales, 'nl_nl');
+  })
+})
+
 describe('get_questionaire_translations(name)', () => {
   it('should return translations merged with defaults');
 })

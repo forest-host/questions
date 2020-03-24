@@ -85,6 +85,10 @@ export const get_questionaire = function(name) {
   return config;
 }
 
+export const get_questionaire_locales = function(name) {
+  return Object.keys(questionaires[name].translations);
+}
+
 // TODO 
 export const get_questionaire_translations = function(name) {
 }
