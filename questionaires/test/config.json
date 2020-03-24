@@ -15,6 +15,11 @@
         "required": true,
         "options": [ "male", "female" ]
       },
+      "symptoms": {
+        "type": "multiselect",
+        "required": true,
+        "options": [ "cough", "fever", "smell" ]
+      },
       "fever": {
         "type": "boolean",
         "required": false

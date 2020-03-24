@@ -57,7 +57,9 @@ const is_answer = function(question, answer) {
     case 'select':
       return question.options.indexOf(answer) != -1;
     case 'multiselect':
-      return Array.isArray(answer) && answer.reduce((all_ok, option) => { question.options.indexOf(option) != -1 }, true);
+      return Array.isArray(answer) && answer.reduce((all_ok, option) => { 
+        return all_ok && question.options.indexOf(option) != -1 
+      }, true);
     case 'date':
       return typeof(answer) == 'date';
   }
@@ -74,7 +76,14 @@ const get_errors = function(questions, data) {
     // Only validate when conditions are met
     if(conditions_met(questions, question_name, data)) {
       // Is this field required? TODO - multiselect arrays with no values
-      if(question.required && ! data.hasOwnProperty(question_name)) {
+      if(question.required 
+        && ( 
+          // Could be this is a multiselect with 0 answers
+          ! data.hasOwnProperty(question_name) 
+          || ( Array.isArray(data[question_name]) && data[question_name].length == 0)
+        )
+      ) 
+      {
         return { ...errors, [question_name]: 'required' };
       }
 

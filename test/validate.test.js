@@ -43,7 +43,20 @@ describe('validate(name, data)', () => {
         questions.validate('test', data);
       } catch(err) {
         assert.propertyVal(err.fields, 'year_of_birth', 'required');
-        assert.lengthOf(Object.keys(err.fields), 1);
+      }
+    })
+
+    it('errors for required empty multiselect fields', () => {
+      let data = { 
+        year_of_birth: 1992,
+        sex: 'male',
+        symptoms: [],
+      };
+
+      try {
+        questions.validate('test', data);
+      } catch(err) {
+        assert.propertyVal(err.fields, 'symptoms', 'required');
       }
     })
   })
@@ -52,6 +65,7 @@ describe('validate(name, data)', () => {
     it('does not error for conditional fields without met conditions', () => {
       let data = {
         year_of_birth: 1992,
+        symptoms: ['cough'],
         sex: 'male',
       };
 
@@ -99,6 +113,7 @@ describe('validate(name, data)', () => {
     it('does not error for in bounds input', () => {
       let data = {
         year_of_birth: 1923,
+        symptoms: ['cough'],
         sex: 'male',
       };
 
@@ -110,6 +125,7 @@ describe('validate(name, data)', () => {
     it('allows string input instead of question type for `other` config', () => {
       let data = {
         year_of_birth: 1923,
+        symptoms: ['cough'],
         sex: 'non-binary',
       };
 
@@ -130,6 +146,7 @@ describe('validate(name, data)', () => {
     let data = {
       year_of_birth: 1923,
       sex: 'non-binary',
+      symptoms: ['cough'],
       non_existant: 'value',
     };
 
