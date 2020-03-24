@@ -8,7 +8,7 @@ export class ValidationError extends Error {
   }
 }
 
-const get_questions = function(questionaire, only_recurring) {
+export const get_questions = function(questionaire, only_recurring) {
   return Object.keys(questionaire.groups).reduce((questions, group_name) => {
     return Object.assign(questions, questionaire.groups[group_name].questions);
   }, {});
