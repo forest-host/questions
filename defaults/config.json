@@ -1,21 +1,31 @@
 {
-  "integer": {
-    "min": 0,
-    "max": 10,
-    "variants": {
-      "likert": {
+  "defaults": {
+    "required": false,
+    "other": false
+  },
+  "types": {
+    "integer": {
+      "defaults": {
         "min": 0,
-        "max": 5
+        "max": 10
+      },
+      "variants": {
+        "likert": {
+          "min": 0,
+          "max": 5
+        }
       }
-    }
-  },
-  "float": {
-    "decimals": 0
-  },
-  "multiselect": {
-    "variants": {
-      "country": {
-        "options": [ "NLD" ]
+    },
+    "float": {
+      "defaults": {
+        "decimals": 0
+      }
+    },
+    "multiselect": {
+      "variants": {
+        "country": {
+          "options": [ "NLD" ]
+        }
       }
     }
   }

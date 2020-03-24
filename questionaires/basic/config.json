@@ -5,6 +5,7 @@
       "year_of_birth": {
         "type": "integer",
         "variant": "year",
+        "required": true,
         "min": 1900,
         "max": 2020
       },
@@ -77,9 +78,7 @@
         "type": "boolean"
       },
       "home_leaves": {
-        "type": "integer",
-        "min": 0,
-        "max": 10
+        "type": "integer"
       },
       "travel_last_weeks": {
         "type": "multiselect",
