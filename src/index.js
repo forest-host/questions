@@ -4,6 +4,30 @@ import require_dir from 'require-dir';
 const defaults = require_dir('../defaults', { recurse: true });
 const questionaires = require_dir('../questionaires', { recurse: true });
 
+// Unique value filter
+const unique = function(value, index, array) {
+  return array.indexOf(value) === index;
+}
+
+// Get question type strings from questionaires
+export const get_question_types = function() {
+  return Object
+    .keys(questionaires)
+    .flatMap(name => {
+      let questionaire = questionaires[name].config;
+
+      return Object.keys(questionaire.groups).flatMap(name => {
+        let group = questionaire.groups[name];
+
+        return Object.keys(group).map(name => {
+          let question = group[name];
+          return question.type;
+        })
+      })
+    })
+    .filter(unique);
+}
+
 /**
  * Get a list of questionaires
  */
