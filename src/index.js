@@ -19,11 +19,10 @@ export const get_question_types = function() {
       let questionaire = questionaires[name].config;
 
       return Object.keys(questionaire.groups).flatMap(name => {
-        let group = questionaire.groups[name];
+        let questions = questionaire.groups[name].questions;
 
-        return Object.keys(group).map(name => {
-          let question = group[name];
-          return question.type;
+        return Object.keys(questions).map(name => {
+          return questions[name].type;
         })
       })
     })
@@ -50,9 +49,15 @@ export const get_questionaire = function(name) {
   let config = questionaires[name].config;
 
   Object.keys(config.groups).forEach(group_name => {
-    Object.keys(config.groups[group_name]).forEach(question_name => {
-      let question_config = config.groups[group_name][question_name];
+    let group = config.groups[group_name];
+    // Add group defaults
+    if( ! group.hasOwnProperty('recurring')) {
+      group.recurring = defaults.config.groups.recurring;
+    }
 
+    // Add question defaults
+    Object.keys(group.questions).forEach(question_name => {
+      let question_config = group.questions[question_name];
 
       // Add defaults when they dont exist on question
       Object.keys(defaults.config.defaults).forEach(key => {

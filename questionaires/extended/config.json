@@ -2,142 +2,152 @@
   "name": "extended",
   "groups": {
     "symptoms": {
-      "fever_start": {
-        "type": "date"
-      },
-      "fever_suddenly": {
-        "type": "boolean"
-      },
-      "cough_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "fatigue_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "cough_slime_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "short_breath_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "muscle_ache_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "sore_throat_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "headache_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "chills_severity": {
-        "type": "integer",
-        "variant": "likert"
-      },
-      "nauseous_severity": {
-        "type": "integer",
-        "variant": "likert"
+      "questions": {
+        "fever_start": {
+          "type": "date"
+        },
+        "fever_suddenly": {
+          "type": "boolean"
+        },
+        "cough_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "fatigue_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "cough_slime_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "short_breath_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "muscle_ache_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "sore_throat_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "headache_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "chills_severity": {
+          "type": "integer",
+          "variant": "likert"
+        },
+        "nauseous_severity": {
+          "type": "integer",
+          "variant": "likert"
+        }
+
       }
     },
     "social": {
-      "social_contacts": {
-        "type": "multiselect",
-        "options": [
-          "teenagers",
-          "elderly",
-          "patients",
-          "groups"
-        ]
-      },
-      "household_babies": {
-        "type": "integer"
-      },
-      "household_children": {
-        "type": "integer"
-      },
-      "household_adults": {
-        "type": "integer"
-      },
-      "household_seniors": {
-        "type": "integer"
-      },
-      "household_elderly": {
-        "type": "integer"
-      },
-      "household_children_external_contact": {
-        "type": "integer",
-        "conditions": [
-          {
-            "question": "household_children",
-            "not_answer": 0
-          }
-        ]      
+      "questions": {
+        "social_contacts": {
+          "type": "multiselect",
+          "options": [
+            "teenagers",
+            "elderly",
+            "patients",
+            "groups"
+          ]
+        },
+        "household_babies": {
+          "type": "integer"
+        },
+        "household_children": {
+          "type": "integer"
+        },
+        "household_adults": {
+          "type": "integer"
+        },
+        "household_seniors": {
+          "type": "integer"
+        },
+        "household_elderly": {
+          "type": "integer"
+        },
+        "household_children_external_contact": {
+          "type": "integer",
+          "conditions": [
+            {
+              "question": "household_children",
+              "not_answer": 0
+            }
+          ]      
+        }
       }
     },
     "transport": {
-      "transport_means": {
-        "type": "select",
-        "other": true,
-        "options": [
-          "walking",
-          "bicycle",
-          "bike",
-          "car",
-          "public"
-        ]
-      },
-      "transport_time": {
-        "type": "integer",
-        "variant": "minutes",
-        "min": 0,
-        "max": 240
+      "questions": {
+        "transport_means": {
+          "type": "select",
+          "other": true,
+          "options": [
+            "walking",
+            "bicycle",
+            "bike",
+            "car",
+            "public"
+          ]
+        },
+        "transport_time": {
+          "type": "integer",
+          "variant": "minutes",
+          "min": 0,
+          "max": 240
+        }
       }
     },
     "medical": {
-      "medication": {
-        "type": "multiselect",
-        "options": [
-          "asthma",
-          "diabetes",
-          "lung_disorder",
-          "heart_disorder",
-          "kidney_disorder",
-          "immunocompromising_condition"
-        ]
-      },
-      "tobacco": {
-        "type": "integer",
-        "required": false,
-        "min": 0,
-        "max": 20
-      },
-      "allergies": {
-        "type": "multiselect",
-        "options": [
-          "hay_fever",
-          "dust_mite",
-          "animals",
-          "other_respiratory_allergies"
-        ]
-      },
-      "travel_before_symptoms": {
-        "type": "boolean"
-      },
-      "travel_before_symptoms_countries": {
-        "type": "multiselect",
-        "variant": "country",
-        "conditions": [
-          {
-            "question": "travel_after_symptoms",
-            "answer": true
-          }
-        ]
+      "questions": {
+        "medication": {
+          "type": "multiselect",
+          "options": [
+            "asthma",
+            "diabetes",
+            "lung_disorder",
+            "heart_disorder",
+            "kidney_disorder",
+            "immunocompromising_condition"
+          ]
+        },
+        "tobacco": {
+          "type": "integer",
+          "required": false,
+          "min": 0,
+          "max": 20
+        },
+        "allergies": {
+          "type": "multiselect",
+          "options": [
+            "hay_fever",
+            "dust_mite",
+            "animals",
+            "other_respiratory_allergies"
+          ]
+        },
+        "travel_before_symptoms": {
+          "type": "boolean"
+        },
+        "travel_before_symptoms_countries": {
+          "type": "multiselect",
+          "variant": "country",
+          "conditions": [
+            {
+              "question": "travel_after_symptoms",
+              "answer": true
+            }
+          ]
+        }
+
       }
     }
   }

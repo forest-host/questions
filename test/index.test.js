@@ -21,14 +21,18 @@ describe('get_questionaires()', () => {
 })
 
 describe('get_questionaire(name)', () => {
+  let questionaire = questions.get_questionaire('basic');
+
   it('should return questionaire config', () => {
-    assert.isNotNull(questions.get_questionaire('basic'));
+    assert.isDefined(questionaire.groups);
   });
 
   it('should merge defaults for every question', () => {
-    let config = questions.get_questionaire('basic');
+    assert.isDefined(questionaire.groups.symptoms.questions.fever.other);
+  })
 
-    assert.isNotNull(config.groups.symptoms.year_of_birth.other);
+  it('should add group defaults', () => {
+    assert.isDefined(questionaire.groups.symptoms.recurring);
   })
 })
 

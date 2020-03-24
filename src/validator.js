@@ -10,7 +10,7 @@ export class ValidationError extends Error {
 
 const get_questions = function(questionaire) {
   return Object.keys(questionaire.groups).reduce((questions, group_name) => {
-    return Object.assign(questions, questionaire.groups[group_name]);
+    return Object.assign(questions, questionaire.groups[group_name].questions);
   }, {});
 }
 

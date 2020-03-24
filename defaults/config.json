@@ -1,4 +1,7 @@
 {
+  "groups": {
+    "recurring": true
+  },
   "defaults": {
     "required": false,
     "other": false
