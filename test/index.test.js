@@ -2,12 +2,12 @@
 import chai from 'chai';
 const assert = chai.assert;
 
-import * as questions from '../src';
+import * as symptotrack from '../src';
 
 
 describe('get_question_types()', () => {
   it('returns an array of question types', () => {
-    let types = questions.get_question_types();
+    let types = symptotrack.get_question_types();
 
     assert.include(types, 'integer');
     assert.include(types, 'text');
@@ -16,12 +16,12 @@ describe('get_question_types()', () => {
 
 describe('get_questionaires()', () => {
   it('should return a list of questionaires', () => {
-    assert.deepEqual(questions.get_questionaires(), ['basic', 'extended', 'test']);
+    assert.deepEqual(symptotrack.get_questionaires(), ['basic', 'extended', 'test']);
   })
 })
 
 describe('get_questionaire(name, only_recurring)', () => {
-  let questionaire = questions.get_questionaire('test');
+  let questionaire = symptotrack.get_questionaire('test');
 
   it('should return questionaire config', () => {
     assert.isDefined(questionaire.groups);
@@ -36,14 +36,22 @@ describe('get_questionaire(name, only_recurring)', () => {
   })
 
   it('should only return recurring groups when asked', () => {
-    let questionaire = questions.get_questionaire('test', true);
+    let questionaire = symptotrack.get_questionaire('test', true);
     assert.lengthOf(Object.keys(questionaire.groups), 1);
+  })
+})
+
+describe('get_locales()', () => {
+  it('should return an aggregate of all possible locales used by all questionaires', () => {
+    let locales = symptotrack.get_locales();
+
+    assert.include(locales, 'nl_nl');
   })
 })
 
 describe('get_questionaire_locales(name)', () => {
   it('should return a list of locales for questionaire', () => {
-    let locales = questions.get_questionaire_locales('basic');
+    let locales = symptotrack.get_questionaire_locales('basic');
 
     assert.include(locales, 'nl_nl');
   })

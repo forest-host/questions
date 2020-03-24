@@ -108,6 +108,14 @@ export const get_questionaire = function(name, only_recurring = false) {
   return config;
 }
 
+export const get_locales = function() {
+  return Object
+    .keys(questionaires)
+    // Ternary is there to not crash when no translations are present for questionaire
+    .flatMap(name => typeof(questionaires[name].translations) !== 'undefined' ? Object.keys(questionaires[name].translations) : [])
+    .filter(unique);
+}
+
 export const get_questionaire_locales = function(name) {
   return Object.keys(questionaires[name].translations);
 }
