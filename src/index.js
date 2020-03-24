@@ -41,18 +41,28 @@ export const get_questionaires = function() {
 /**
  * Get questionaire config for a questionaire with all blanks filled with defaults
  */
-export const get_questionaire = function(name) {
+export const get_questionaire = function(name, only_recurring = false) {
   if(process.env.NODE_ENV !== 'testing' && name == 'test') {
     throw new Error('test questionaire can only be used in testing environments');
   }
 
-  let config = questionaires[name].config;
+  // Clone config to not change globals, use clone & foreach instead of mapping everything as 
+  // JSON is natively implemented in browsers/node and therefore more performant
+  let config = JSON.parse(JSON.stringify(questionaires[name].config));
 
-  Object.keys(config.groups).forEach(group_name => {
+  // Add defaults to clone
+  let groups = Object.keys(config.groups).forEach(group_name => {
     let group = config.groups[group_name];
+
     // Add group defaults
     if( ! group.hasOwnProperty('recurring')) {
       group.recurring = defaults.config.groups.recurring;
+    }
+
+    // Remove groups when only recurring groups are requested
+    if( ! group.recurring && only_recurring) {
+      delete config.groups[group_name];
+      return;
     }
 
     // Add question defaults
@@ -93,7 +103,7 @@ export const get_questionaire = function(name) {
         }
       }
     })
-  })
+  });
 
   return config;
 }

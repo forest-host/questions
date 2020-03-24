@@ -8,7 +8,7 @@ export class ValidationError extends Error {
   }
 }
 
-const get_questions = function(questionaire) {
+const get_questions = function(questionaire, only_recurring) {
   return Object.keys(questionaire.groups).reduce((questions, group_name) => {
     return Object.assign(questions, questionaire.groups[group_name].questions);
   }, {});
@@ -75,7 +75,7 @@ const get_errors = function(questions, data) {
 
     // Only validate when conditions are met
     if(conditions_met(questions, question_name, data)) {
-      // Is this field required? TODO - multiselect arrays with no values
+      // Is this field required?
       if(question.required 
         && ( 
           // Could be this is a multiselect with 0 answers
@@ -96,7 +96,7 @@ const get_errors = function(questions, data) {
           return { ...errors, [question_name]: 'invalid_input' };
         }
         
-        // TODO - type specific rules
+        // Type specific rules
         switch(question.type) {
           case 'float':
           case 'integer': 
@@ -126,9 +126,7 @@ const pick = function(...keys) {
   }
 }
 
-export const validate = function(name, data) {
-  let questionaire = symptotrack.get_questionaire(name);
-
+export const validate = function(questionaire, data) {
   let questions = get_questions(questionaire);
   let errors = get_errors(questions, data);
 

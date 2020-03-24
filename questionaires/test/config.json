@@ -1,7 +1,8 @@
 {
   "name": "basic",
   "groups": {
-    "symptoms": {
+    "identity": {
+      "recurring": false,
       "questions": {
         "year_of_birth": {
           "type": "integer",
@@ -15,7 +16,11 @@
           "other": true,
           "required": true,
           "options": [ "male", "female" ]
-        },
+        }
+      }
+    },
+    "symptoms": {
+      "questions": {
         "symptoms": {
           "type": "multiselect",
           "required": true,

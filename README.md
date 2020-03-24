@@ -155,14 +155,16 @@ A translation of a question would look like this:
 #### `get_questionaires()`
 Returns a array of questionaires found in repository
 
-#### `get_questionaire(name)`
+#### `get_questionaire(name, only_recurring = false)`
 Returns a config object for questionaire, with defaults merged in for every question that did not specify some properties
+
+it's possible to pass `only_recurring`, which will only return questiongroups that are "recurring", meaning they have to be filled in on subsequent responses from the same respondent.
 
 #### `get_questionaire_translations(name)`
 Returns a config object containing all translations for questionaire, with defaults merged in all unspecified keys
 
-#### `validate(name, data)`
-Validate a data object based on the `name` questionaire
+#### `validate(questionaire, data)`
+Validate a data object based on the questionaire
 
 This function will return a sanitized data object on success (with keys removed that are not part of the questionaire)
 
@@ -170,8 +172,9 @@ It will throw a ValidationError on encountered errors, error tags are contained 
 
 ```
 {
+  let questionaire = symptotrack.get_questionaire('test');
   try {
-    validate('test', {});
+    validate(questionaire, {});
   } catch(err) {
     assert.propertyVal(err.fields, 'year_of_birth', 'required');
   }

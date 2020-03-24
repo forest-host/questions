@@ -10,7 +10,7 @@ describe('validate(name, data)', () => {
   it('should throw validation error for invalid data', () => {
     let data = { field: 'test' };
 
-    assert.throws(() => questions.validate('test', data), questions.ValidationError);
+    assert.throws(() => questions.validate(questionaire, data), questions.ValidationError);
   });
 
   it('should throw validation error for invalid data types', () => {
@@ -21,7 +21,7 @@ describe('validate(name, data)', () => {
       fever: false,
     };
 
-    let callback = () => questions.validate('test', data);
+    let callback = () => questions.validate(questionaire, data);
 
     assert.throws(callback, questions.ValidationError);
 
@@ -40,7 +40,7 @@ describe('validate(name, data)', () => {
       };
 
       try {
-        questions.validate('test', data);
+        questions.validate(questionaire, data);
       } catch(err) {
         assert.propertyVal(err.fields, 'year_of_birth', 'required');
       }
@@ -54,7 +54,7 @@ describe('validate(name, data)', () => {
       };
 
       try {
-        questions.validate('test', data);
+        questions.validate(questionaire, data);
       } catch(err) {
         assert.propertyVal(err.fields, 'symptoms', 'required');
       }
@@ -69,7 +69,7 @@ describe('validate(name, data)', () => {
         sex: 'male',
       };
 
-      assert.doesNotThrow(() => questions.validate('test', data));
+      assert.doesNotThrow(() => questions.validate(questionaire, data));
     })
 
     it('does error for conditional fields with conditions met', () => {
@@ -79,7 +79,7 @@ describe('validate(name, data)', () => {
         fever: true,
       };
 
-      let callback = () => questions.validate('test', data);
+      let callback = () => questions.validate(questionaire, data);
 
       assert.throws(callback, questions.ValidationError);
 
@@ -98,7 +98,7 @@ describe('validate(name, data)', () => {
         sex: 'male',
       };
 
-      let callback = () => questions.validate('test', data);
+      let callback = () => questions.validate(questionaire, data);
 
       assert.throws(callback, questions.ValidationError);
 
@@ -117,7 +117,7 @@ describe('validate(name, data)', () => {
         sex: 'male',
       };
 
-      assert.doesNotThrow(() => questions.validate('test', data));
+      assert.doesNotThrow(() => questions.validate(questionaire, data));
     })
   })
 
@@ -129,7 +129,7 @@ describe('validate(name, data)', () => {
         sex: 'non-binary',
       };
 
-      assert.doesNotThrow(() => questions.validate('test', data));
+      assert.doesNotThrow(() => questions.validate(questionaire, data));
     })
     
     it('only allows question type input for non-other questions', () => {
@@ -138,7 +138,7 @@ describe('validate(name, data)', () => {
         sex: 'non-binary',
       };
 
-      assert.throws(() => questions.validate('test', data), questions.ValidationError);
+      assert.throws(() => questions.validate(questionaire, data), questions.ValidationError);
     })
   })
 
@@ -150,7 +150,7 @@ describe('validate(name, data)', () => {
       non_existant: 'value',
     };
 
-    let clean = questions.validate('test', data);
+    let clean = questions.validate(questionaire, data);
 
     assert.notProperty(clean, 'non_existant');
   })

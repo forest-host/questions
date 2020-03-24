@@ -20,8 +20,8 @@ describe('get_questionaires()', () => {
   })
 })
 
-describe('get_questionaire(name)', () => {
-  let questionaire = questions.get_questionaire('basic');
+describe('get_questionaire(name, only_recurring)', () => {
+  let questionaire = questions.get_questionaire('test');
 
   it('should return questionaire config', () => {
     assert.isDefined(questionaire.groups);
@@ -33,6 +33,11 @@ describe('get_questionaire(name)', () => {
 
   it('should add group defaults', () => {
     assert.isDefined(questionaire.groups.symptoms.recurring);
+  })
+
+  it('should only return recurring groups when asked', () => {
+    let questionaire = questions.get_questionaire('test', true);
+    assert.lengthOf(Object.keys(questionaire.groups), 1);
   })
 })
 
