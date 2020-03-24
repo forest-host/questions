@@ -60,3 +60,7 @@ export const get_questionaire = function(name) {
 
   return config;
 }
+
+// TODO 
+export const get_questionaire_translations = function(name) {
+}

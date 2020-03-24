@@ -75,7 +75,7 @@
         "conditionals": [
           {
             "question": "household_children",
-            "not_option": 0
+            "not_answer": 0
           }
         ]      
       }
@@ -135,7 +135,7 @@
         "conditionals": [
           {
             "question": "travel_after_symptoms",
-            "option": true
+            "answer": true
           }
         ]
       }
