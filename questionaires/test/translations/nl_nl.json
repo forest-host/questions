@@ -1,0 +1,30 @@
+{
+  "errors": {
+    "required": "Dit veld is verplicht",
+    "out_of_bounds": "Voer een waarde in tussen %d en %d",
+    "invalid_option": "Kies een van de opties"
+  },
+  "groups": {
+    "symptoms": {
+      "title": "Wat zijn je symptomen",
+      "next": "Naar de volgende vragen"
+    }
+  },
+  "questions": {
+    "location": {
+      "question": "Waar ben je nu?",
+      "skip": "weet ik niet"
+    },
+    "year_of_birth": {
+      "question": "In welk jaar ben je geboren"
+    },
+    "sex": {
+      "question": "Wat is je geslacht",
+      "other": "Anders",
+      "answers": {
+        "male": "Man",
+        "female": "Vrouw"
+      }
+    }
+  }
+}

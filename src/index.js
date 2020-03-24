@@ -1,5 +1,7 @@
 
 import require_dir from 'require-dir';
+export * from './validator';
+
 
 const defaults = require_dir('../defaults', { recurse: true });
 const questionaires = require_dir('../questionaires', { recurse: true });
@@ -32,13 +34,19 @@ export const get_question_types = function() {
  * Get a list of questionaires
  */
 export const get_questionaires = function() {
-  return Object.keys(questionaires);
+  return Object.keys(questionaires)
+    // Only return test questionaire in testing envs
+    .filter(name => name != 'test' || process.env.NODE_ENV == 'testing')
 }
 
 /**
  * Get questionaire config for a questionaire with all blanks filled with defaults
  */
 export const get_questionaire = function(name) {
+  if(process.env.NODE_ENV !== 'testing' && name == 'test') {
+    throw new Error('test questionaire can only be used in testing environments');
+  }
+
   let config = questionaires[name].config;
 
   Object.keys(config.groups).forEach(group_name => {

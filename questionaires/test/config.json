@@ -1,0 +1,37 @@
+{
+  "name": "basic",
+  "groups": {
+    "symptoms": {
+      "year_of_birth": {
+        "type": "integer",
+        "variant": "year",
+        "required": true,
+        "min": 1900,
+        "max": 2020
+      },
+      "sex": {
+        "type": "select",
+        "other": true,
+        "required": true,
+        "options": [ "male", "female" ]
+      },
+      "fever": {
+        "type": "boolean"
+      },
+      "fever_degrees": {
+        "type": "float",
+        "required": true,
+        "decimals": 1,
+        "min": 36.0,
+        "max": 41.0,
+        "variant": "temperature",
+        "conditionals": [
+          {
+            "question": "fever",
+            "answer": true
+          }
+        ]
+      }
+    }
+  }
+}
