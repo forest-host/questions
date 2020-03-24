@@ -77,14 +77,19 @@ A questionaire is a group of questions:
   "name": "basic",
   "groups": {
     "group_tag_1": {
-      "question_tag_1": {
-      },
-      "question_tag_2": {
+      "recurring": true,
+      "questions": {
+        "question_tag_1": {
+        },
+        "question_tag_2": {
+        }
       }
     }
   }
 }
 ```
+
+When a question group is `recurring`, the questions it contains will be asked again when a respondent returns to update a filled in questionaire.
 
 Questions can be configured like this:
 ```
