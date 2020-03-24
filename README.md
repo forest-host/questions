@@ -13,8 +13,8 @@ You can add `required: true` to a question to make it required
 ### other
 You can add `other: true` to a question to enable submission of string input instead of the questions type based data
 
-### Conditionals
-You can add conditionals to questions to make them only appear when a specific answer was given to another question.
+### Conditions
+You can add conditions to questions to make them only appear when a specific answer was given to another question.
 
 For instance, to make a question depend on the answer `true` to question `do_you_like_coffee` you could do this:
 ```
@@ -22,7 +22,7 @@ For instance, to make a question depend on the answer `true` to question `do_you
   "type": "integer",
   "min": 4,
   "max": Infinity,
-  "conditionals": [
+  "conditions": [
     {
       "question": "do_you_like_coffee",
       "answer": true
@@ -101,7 +101,7 @@ Questions can be configured like this:
 "fever_degrees": {
   "type": "float",
   "variant": "temperature",
-  "conditionals": [
+  "conditions": [
     {
       "question": "fever",
       "option": true

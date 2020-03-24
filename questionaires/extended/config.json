@@ -72,7 +72,7 @@
       },
       "household_children_external_contact": {
         "type": "integer",
-        "conditionals": [
+        "conditions": [
           {
             "question": "household_children",
             "not_answer": 0
@@ -132,7 +132,7 @@
       "travel_before_symptoms_countries": {
         "type": "multiselect",
         "variant": "country",
-        "conditionals": [
+        "conditions": [
           {
             "question": "travel_after_symptoms",
             "answer": true

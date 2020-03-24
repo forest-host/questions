@@ -2,7 +2,7 @@
   "errors": {
     "required": "Dit veld is verplicht",
     "out_of_bounds": "Voer een waarde in tussen %d en %d",
-    "invalid_option": "Kies een van de opties"
+    "invalid_input": "Ongeldige waarde"
   },
   "groups": {
     "symptoms": {
