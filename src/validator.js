@@ -38,7 +38,7 @@ const conditions_met = function(questions, question_name, data) {
   }
 }
 
-const is_answer = function(question, answer) {
+export const is_answer = function(question, answer) {
   switch(question.type) {
     case 'boolean': 
       return typeof(answer) == 'boolean';
@@ -59,7 +59,7 @@ const is_answer = function(question, answer) {
   }
 }
 
-const is_other_answer = function(question, answer) {
+export const is_other_answer = function(question, answer) {
   return question.other && typeof(answer) == 'string';
 }
 
