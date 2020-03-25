@@ -12,14 +12,21 @@
     "sex": {
       "question": "Wat is je geslacht",
       "other": "Anders",
-      "answers": {
+      "options": {
         "male": "Man",
         "female": "Vrouw"
       }
     },
     "dry_cough": {
       "question": "Hoest je nu?",
-      "skip": "weet ik niet"
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja heel veel",
+        "false": "nee niet echt"
+      }
+    },
+    "fever": {
+      "question": "Heb je koorts?"
     },
     "travel_last_weeks": {
       "question": "Waar ben je geweest afgelopen weken?"

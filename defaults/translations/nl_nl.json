@@ -19,6 +19,14 @@
     "other": "Anders, namelijk"
   },
   "types": {
+    "boolean": {
+      "defaults": {
+        "options": {
+          "true": "Ja",
+          "false": "Nee"
+        }
+      }
+    },
     "multiselect": {
       "defaults": {
         "other": "Geen van de bovenstaande opties"
