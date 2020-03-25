@@ -30,6 +30,15 @@ export const get_question_types = function() {
 }
 
 /**
+ * Get all questions in questionaire without groups
+ */
+export const get_questions = function(questionaire, only_recurring) {
+  return Object.keys(questionaire.groups).reduce((questions, group_name) => {
+    return Object.assign(questions, questionaire.groups[group_name].questions);
+  }, {});
+}
+
+/**
  * Get a list of questionaires
  */
 export const get_questionaires = function() {
@@ -123,5 +132,64 @@ export const get_questionaire_locales = function(name) {
 /**
  * Get translations of questionaire
  */
-export const get_questionaire_translations = function(name) {
+export const get_questionaire_translations = function(questionaire_name, locale) {
+  let questionaire = get_questionaire(questionaire_name);
+  let questions = get_questions(questionaire);
+
+  let translations = JSON.parse(JSON.stringify(questionaires[questionaire_name].translations[locale]));
+  let default_translations = defaults.translations[locale];
+
+  // Add default group titles and next buttons
+  Object.keys(translations.groups).forEach(group_name => {
+    let group_translations = translations.groups[group_name];
+
+    Object.keys(default_translations.groups).forEach(key => {
+      if( ! group_translations.hasOwnProperty(key)) {
+        group_translations[key] = default_translations.groups[key];
+      }
+    });
+  });
+
+  Object.keys(translations.questions).forEach(question_name => {
+    let question_translations = translations.questions[question_name];
+    let question_config = questions[question_name];
+
+    // Add type & variant specific translations
+    if(default_translations.types.hasOwnProperty(question_config.type)) {
+      let type_translations = default_translations.types[question_config.type];
+
+      // First add variant defaults
+      if(question_config.hasOwnProperty('variant') 
+        && type_translations.hasOwnProperty('variants') 
+        && type_translations.variants.hasOwnProperty(question_config.variant)) 
+      {
+        let variant_translations = type_translations.variants[question_config.variant];
+
+        Object.keys(variant_translations).forEach(key => {
+          if( ! question_translations.hasOwnProperty(key)) {
+            // TODO - Do we have to clone here to make sure objects are copied?
+            question_translations[key] = variant_translations[key];
+          }
+        })
+      }
+
+      // Next, add type defaults
+      if(type_translations.hasOwnProperty('defaults')) {
+        Object.keys(type_translations.defaults).forEach(key => {
+          if( ! question_translations.hasOwnProperty(key)) {
+            question_translations[key] = type_translations.defaults[key];
+          }
+        })
+      }
+    }
+
+    // Lastly, add question defaults
+    Object.keys(default_translations.questions).forEach(key => {
+      if( ! question_translations.hasOwnProperty(key)) {
+        question_translations[key] = default_translations.questions[key];
+      }
+    })
+  })
+
+  return translations;
 }

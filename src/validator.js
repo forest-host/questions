@@ -8,12 +8,6 @@ export class ValidationError extends Error {
   }
 }
 
-export const get_questions = function(questionaire, only_recurring) {
-  return Object.keys(questionaire.groups).reduce((questions, group_name) => {
-    return Object.assign(questions, questionaire.groups[group_name].questions);
-  }, {});
-}
-
 // Check if all condtions are met, meaning we have to validate this question
 const conditions_met = function(questions, question_name, data) {
   let question = questions[question_name]
@@ -127,7 +121,7 @@ const pick = function(...keys) {
 }
 
 export const validate = function(questionaire, data) {
-  let questions = get_questions(questionaire);
+  let questions = symptotrack.get_questions(questionaire);
   let errors = get_errors(questions, data);
 
   if(Object.keys(errors) == 0) {

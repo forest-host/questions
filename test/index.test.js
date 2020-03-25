@@ -57,7 +57,15 @@ describe('get_questionaire_locales(name)', () => {
   })
 })
 
-describe('get_questionaire_translations(name)', () => {
-  it('should return translations merged with defaults');
+describe('get_questionaire_translations(locale)', () => {
+  it('should return translations merged with defaults', () => {
+    let translations = symptotrack.get_questionaire_translations('basic', 'nl_nl');
+
+    assert.property(translations, 'groups');
+    assert.property(translations, 'questions');
+  });
 })
 
+describe('get_error_translations(locale)', () => {
+  it('Returns error translations');
+})

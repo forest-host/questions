@@ -2,10 +2,27 @@
   "errors": {
     "required": "Dit veld is verplicht",
     "out_of_bounds": "Voer een waarde in tussen %d en %d",
-    "invalid_input": "Ongeldige waarde"
+    "invalid_integer": "Ongeldige waarde",
+    "invalid_float": "Ongeldige waarde",
+    "invalid_text": "Ongeldige waarde",
+    "invalid_select": "Ongeldige waarde",
+    "invalid_multiselect": "Ongeldige waarde",
+    "invalid_date": "Ongeldige waarde",
+    "invalid_boolean": "Ongeldige waarde"
+  },
+  "groups": {
+    "title": "Vragenlijst",
+    "next": "Naar de volgende vragen"
+  },
+  "questions": {
+    "skip": "Weet ik niet",
+    "other": "Anders, namelijk"
   },
   "types": {
     "multiselect": {
+      "defaults": {
+        "other": "Geen van de bovenstaande opties"
+      },
       "variants": {
         "country": {
           "options": {

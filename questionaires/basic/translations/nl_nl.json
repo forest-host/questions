@@ -1,17 +1,13 @@
 {
   "groups": {
     "symptoms": {
-      "title": "Wat zijn je symptomen",
-      "next": "Naar de volgende vragen"
+      "title": "Wat zijn je symptomen"
     }
   },
   "questions": {
-    "location": {
-      "question": "Waar ben je nu?",
-      "skip": "weet ik niet"
-    },
     "year_of_birth": {
-      "question": "In welk jaar ben je geboren"
+      "question": "In welk jaar ben je geboren",
+      "tooltip": "Gewoon hoe oud je bent"
     },
     "sex": {
       "question": "Wat is je geslacht",
@@ -20,6 +16,13 @@
         "male": "Man",
         "female": "Vrouw"
       }
+    },
+    "dry_cough": {
+      "question": "Hoest je nu?",
+      "skip": "weet ik niet"
+    },
+    "travel_last_weeks": {
+      "question": "Waar ben je geweest afgelopen weken?"
     }
   }
 }
