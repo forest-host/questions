@@ -39,7 +39,7 @@ For convenience we also support the `not_answer` key.
 Types define the type of answers (boolean, string, etc). Variants define a variant of a input and enable you to set some defaults for variant only.
 
 #### bool
-A boolean is true or false, has no other properties
+A boolean is true or false, `filter` can be passed to indicate that we want to be able to filter by this datapoint
 
 #### integer
 A number without decimals
