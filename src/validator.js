@@ -60,7 +60,7 @@ export const is_answer = function(question, answer) {
 }
 
 export const is_other_answer = function(question, answer) {
-  return question.other && typeof(answer) == 'string';
+  return question.type !== 'string' && question.other && typeof(answer) === 'string';
 }
 
 const get_errors = function(questions, data) {
