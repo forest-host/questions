@@ -160,8 +160,11 @@ Returns a config object for questionaire, with defaults merged in for every ques
 
 it's possible to pass `only_recurring`, which will only return questiongroups that are "recurring", meaning they have to be filled in on subsequent responses from the same respondent.
 
-#### `get_questionaire_translations(name)`
+#### `get_questionaire_translations(name, locale)`
 Returns a config object containing all translations for questionaire, with defaults merged in all unspecified keys
+
+#### `get_error_translations(locale)`
+Returns config object containing translation of error tags
 
 #### `validate(questionaire, data)`
 Validate a data object based on the questionaire

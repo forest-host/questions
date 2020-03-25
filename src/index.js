@@ -193,3 +193,10 @@ export const get_questionaire_translations = function(questionaire_name, locale)
 
   return translations;
 }
+
+/**
+ * Get translations of error texts
+ */
+export const get_error_translations = function(locale) {
+  return defaults.translations[locale].errors;
+}
