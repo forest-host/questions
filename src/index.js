@@ -1,9 +1,9 @@
 
-import require_dir from 'require-directory';
+import require_dir from 'require-dir';
 export * from './validator';
 
-const defaults = require_dir(module, '../defaults');
-const questionaires = require_dir(module, '../questionaires');
+const defaults = require_dir('../defaults', { recurse: true });
+const questionaires = require_dir('../questionaires', { recurse: true });
 
 // Unique value filter
 const unique = function(value, index, array) {
