@@ -93,7 +93,7 @@ const get_errors = function(questions, data) {
 
         // Is this a valid answer based on question type or is this valid "other" question
         if( ! is_answer(question, answer) && ! is_other_answer(question, answer)) {
-          return { ...errors, [question_name]: 'invalid_input' };
+          return { ...errors, [question_name]: `invalid_${question.type}` };
         }
         
         // Type specific rules
@@ -131,7 +131,10 @@ export const validate = function(questionaire, data) {
   let errors = get_errors(questions, data);
 
   if(Object.keys(errors) == 0) {
-    return pick(...Object.keys(questions))(data);
+    let validated_question_names = Object.keys(questions)
+      .filter(question_name => conditions_met(questions, question_name, data));
+
+    return pick(...validated_question_names)(data);
   } else {
     throw new ValidationError(errors);
   }

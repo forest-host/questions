@@ -28,7 +28,7 @@ describe('validate(name, data)', () => {
     try {
       callback();
     } catch(err) {
-      assert.propertyVal(err.fields, 'year_of_birth', 'invalid_input');
+      assert.propertyVal(err.fields, 'year_of_birth', 'invalid_integer');
     }
   })
 

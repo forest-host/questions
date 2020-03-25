@@ -120,6 +120,8 @@ export const get_questionaire_locales = function(name) {
   return Object.keys(questionaires[name].translations);
 }
 
-// TODO 
+/**
+ * Get translations of questionaire
+ */
 export const get_questionaire_translations = function(name) {
 }
