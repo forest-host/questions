@@ -69,6 +69,6 @@ describe('get_questionaire_translations(name, locale)', () => {
 describe('get_error_translations(locale)', () => {
   it('Returns error translations', () => {
     let translations = symptotrack.get_error_translations('nl_nl');
-    console.log(translations);
+    assert.property(translations, 'required');
   });
 })
