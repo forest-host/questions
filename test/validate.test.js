@@ -28,12 +28,12 @@ describe('validate(name, data)', () => {
     try {
       callback();
     } catch(err) {
-      assert.propertyVal(err.fields, 'year_of_birth', 'invalid_integer');
+      assert.propertyVal(err.questions, 'year_of_birth', 'invalid_integer');
     }
   })
 
   describe('required', () => {
-    it('errors for required fields', () => {
+    it('errors for required questions', () => {
       let data = { 
         sex: 'male',
         fever: false,
@@ -42,11 +42,11 @@ describe('validate(name, data)', () => {
       try {
         questions.validate(questionaire, data);
       } catch(err) {
-        assert.propertyVal(err.fields, 'year_of_birth', 'required');
+        assert.propertyVal(err.questions, 'year_of_birth', 'required');
       }
     })
 
-    it('errors for required empty multiselect fields', () => {
+    it('errors for required empty multiselect questions', () => {
       let data = { 
         year_of_birth: 1992,
         sex: 'male',
@@ -56,13 +56,13 @@ describe('validate(name, data)', () => {
       try {
         questions.validate(questionaire, data);
       } catch(err) {
-        assert.propertyVal(err.fields, 'symptoms', 'required');
+        assert.propertyVal(err.questions, 'symptoms', 'required');
       }
     })
   })
 
   describe('conditions', () => {
-    it('does not error for conditional fields without met conditions', () => {
+    it('does not error for conditional questions without met conditions', () => {
       let data = {
         year_of_birth: 1992,
         symptoms: ['cough'],
@@ -72,7 +72,7 @@ describe('validate(name, data)', () => {
       assert.doesNotThrow(() => questions.validate(questionaire, data));
     })
 
-    it('does error for conditional fields with conditions met', () => {
+    it('does error for conditional questions with conditions met', () => {
       let data = {
         year_of_birth: 1992,
         sex: 'male',
@@ -86,7 +86,7 @@ describe('validate(name, data)', () => {
       try {
         callback();
       } catch(err) {
-        assert.propertyVal(err.fields, 'fever_degrees', 'required');
+        assert.propertyVal(err.questions, 'fever_degrees', 'required');
       }
     })
   })
@@ -105,7 +105,7 @@ describe('validate(name, data)', () => {
       try {
         callback();
       } catch(err) {
-        assert.propertyVal(err.fields, 'year_of_birth', 'out_of_bounds');
+        assert.propertyVal(err.questions, 'year_of_birth', 'out_of_bounds');
       }
      
     })
@@ -142,7 +142,7 @@ describe('validate(name, data)', () => {
     })
   })
 
-  it('strips fields that are not part of questionaire when returning valid data', () => {
+  it('strips questions that are not part of questionaire when returning valid data', () => {
     let data = {
       year_of_birth: 1923,
       sex: 'non-binary',

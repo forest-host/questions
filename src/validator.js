@@ -2,9 +2,9 @@
 import * as symptotrack from './';
 
 export class ValidationError extends Error {
-  constructor(fields) {
+  constructor(questions) {
     super('Validation errors occurred');
-    this.fields = fields;
+    this.questions = questions;
   }
 }
 
