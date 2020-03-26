@@ -5,6 +5,31 @@
     }
   },
   "questions": {
+    "responding_for": {
+      "question": "Voor wie vul je deze vragenlijst in?",
+      "options": {
+        "self": "Mijzelf",
+        "somebody_close": "Iemand die bij mij in huis woont",
+        "somebody_else": "Iemand anders"
+      }
+    },
+    "asked_permission": {
+      "question": "Heb je toestemming gevraagd aan degene voor wie je de vragenlijst invult?",
+      "options": {
+        "true": "Ja, ik heb toestemming gevraagd",
+        "false": "Nee, hoezo?"
+      }
+    },
+    "takes_precautions": {
+      "question": "Houd je afstand?",
+      "answers": {
+        "true": "Jazeker",
+        "false": "Nee"
+      }
+    },
+    "location": {
+      "question": "Waar ben je nu?"
+    },
     "year_of_birth": {
       "question": "In welk jaar ben je geboren",
       "tooltip": "Gewoon hoe oud je bent"
@@ -87,10 +112,7 @@
     },
     "travel_last_weeks": {
       "question": "Ben jij de afgelopen twee weken in het buitenland geweest? Zo ja, waarheen?",
-        "answer": "Selecteer land waar je bent geweest"
-  },
-  "placeholder": "Zoek je land"
-}
+      "answer": "Selecteer land waar je bent geweest"
     }
   }
 }

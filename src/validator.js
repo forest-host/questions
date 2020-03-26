@@ -56,6 +56,12 @@ export const is_answer = function(question, answer) {
       }, true);
     case 'date':
       return typeof(answer) == 'date';
+    case 'coordinates':
+      // Is array of 2 coords
+      return Array.isArray(answer) 
+        && answer.length == 2 
+        && typeof(answer[0]) === 'number'
+        && typeof(answer[1]) === 'number';
   }
 }
 
@@ -70,7 +76,7 @@ const get_errors = function(questions, data) {
     // Only validate when conditions are met
     if(conditions_met(questions, question_name, data)) {
       // Is this field required?
-      if(question.required 
+      if(question.required
         && ( 
           // Could be this is a multiselect with 0 answers
           ! data.hasOwnProperty(question_name) 
@@ -79,6 +85,12 @@ const get_errors = function(questions, data) {
       ) 
       {
         return { ...errors, [question_name]: 'required' };
+      }
+
+      if(question.hasOwnProperty('required_answer') 
+        && ( ! data.hasOwnProperty(question_name) || data[question_name] !== question.required_answer))
+      {
+        return { ...errors, [question_name]: 'required_answer' }
       }
 
       // Only validate when value is passed

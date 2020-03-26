@@ -17,6 +17,7 @@
           "type": "boolean",
           "variant": "checkbox",
           "required": true,
+          "required_answer": true,
           "conditions": [
             {
               "question": "responding_for",
@@ -24,10 +25,11 @@
             }
           ]
         },
-        "observes_regulations": {
+        "takes_precautions": {
           "type": "boolean",
           "variant": "checkbox",
           "required": true,
+          "required_answer": true,
           "conditions": [
             {
               "question": "responding_for",
@@ -104,7 +106,8 @@
           "type": "boolean"
         },
         "other_symptoms": {
-          "type": "text"
+          "type": "text",
+          "variant": "textarea"
         },
         "start_symptoms": {
           "type": "integer",

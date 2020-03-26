@@ -11,6 +11,16 @@
           "min": 1900,
           "max": 2020
         },
+        "location": {
+          "type": "coordinates",
+          "required": true
+        },
+        "asked_permission": {
+          "type": "boolean",
+          "variant": "checkbox",
+          "required": true,
+          "required_answer": true
+        },
         "sex": {
           "type": "select",
           "other": true,
