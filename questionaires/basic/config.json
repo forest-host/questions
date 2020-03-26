@@ -72,10 +72,25 @@
           "type": "text"
         },
         "start_symptoms": {
-          "type": "date"
+          "type": "integer",
+          "variant": "days",
+          "required": true,
+          "min": 0,
+          "max": 15 
         },
         "first_symptom": {
-          "type": "text"
+          "type": "multiselect",
+          "options": [
+            "fever",
+            "dry_cough",
+            "fatigue",
+            "cough_slime",
+            "short_breath',
+            "muscle_ache",
+            "sore_throat",
+            "headache",
+            "chills",
+            "nauseous"
         },
         "contact_with_positively_tested_person": {
           "type": "boolean"
@@ -84,7 +99,9 @@
           "type": "boolean"
         },
         "social_distancing": {
-          "type": "boolean"
+          "type": "select",
+          "other": true,
+          "options": [ "Yes", "Sometimes", "No" ]
         },
         "home_leaves": {
           "type": "integer"
