@@ -12,24 +12,147 @@
     "sex": {
       "question": "Wat is je geslacht",
       "other": "Anders",
+      "skip": "Wil ik niet zeggen",
       "options": {
         "male": "Man",
         "female": "Vrouw"
       }
     },
-    "dry_cough": {
-      "question": "Hoest je nu?",
-      "skip": "weet ik niet",
-      "options": {
-        "true": "ja heel veel",
-        "false": "nee niet echt"
-      }
-    },
     "fever": {
       "question": "Heb je koorts?"
     },
+    "fever_degrees": {
+      "question": "Hoeveel graden?"
+    },
+    "dry_cough": {
+      "question": "Heb je last van een droge hoest?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "fatigue": {
+      "question": "Voel je je vermoeid",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "cough_slime": {
+      "question": "En als je hoest, hoest je dan slijm op?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "short_breath": {
+      "question": "Heb je last van kortademigheid?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "muscle_ache": {
+      "question": "Heb je pijn in je spieren of gewrichten?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "sore_throat": {
+      "question": "Heb je last van keelpijn?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "headache": {
+      "question": "Heb je last van hoofdpijn?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "chills": {
+      "question": "En, Heb je last van een koude rillingen?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "nauseous": {
+      "question": "Voel je je misselijk of heb je overgegeven?",
+      "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+        "other_symptoms": {
+      "question": "Zijn er nog meer symptomen die je ervaart?"
+      }
+    },
+      "start-symptoms": {
+      "question": "En weet je nog toevallig wanneer de symptomen zijn begonnen?",
+      "skip": "weet ik niet"
+      }
+    },
+    "first_symptom": {
+      "question": "Welk symptoom ontdekte je als eerste?",
+      "options": {
+        "fever": "koorts",
+        "dry_cough": "Droge hoest",
+        "fatigue": "Vermoeidheid",
+        "cough_slime": "Slijm ophoesten",
+        "short_breath": "Kortademigheid",
+        "muscle_ache": "Spierpijn",
+        "sore_throat": "Keelpijn",
+        "headache": "Hoofdpijn",
+        "chills": "Koude rillingen",
+        "nauseous": "Overgeven"
+      }
+    },
+     "contact_with_positively_tested_person": {
+      "question": "Heb je contact gehad met iemand die positief is getest op corona?",
+       "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+   "quarantined": {
+      "question": "Ben jij (vrijwillig) in thuisquarantaine?",
+       "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+   "social_distancing": {
+      "question": "Beperk jij je sociale contacten?",
+       "skip": "weet ik niet",
+      "options": {
+        "true": "ja",
+        "false": "nee"
+      }
+    },
+   "home_leaves": {
+      "question": "Hoe vaak per dag verlaat jij je huis?"
+      }
+    },
     "travel_last_weeks": {
       "question": "Waar ben je geweest afgelopen weken?"
+      "options": {
+        "true": "ja",
+        "false": "nee" // kijk even hoe hier die dropdown met landen moet?
     }
   }
 }
