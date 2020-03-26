@@ -64,6 +64,7 @@ describe('validate(name, data)', () => {
   describe('required_answer', () => {
     it('errors for answers that differ from required_answer', () => {
       let data = {
+        responding_for: "somebody_else",
         asked_permission: false,
       };
 
@@ -77,15 +78,23 @@ describe('validate(name, data)', () => {
 
   describe('conditions', () => {
     it('does not error for conditional questions without met conditions', () => {
-      let data = {
+      assert.doesNotThrow(() => questions.validate(questionaire, {
         year_of_birth: 1992,
         symptoms: ['cough'],
         sex: 'male',
         location: [0.252, 28.251],
-        asked_permission: true,
-      };
+        responding_for: "self",
+      }));
 
-      assert.doesNotThrow(() => questions.validate(questionaire, data));
+      assert.doesNotThrow(() => questions.validate(questionaire, {
+        year_of_birth: 1992,
+        symptoms: ['cough'],
+        sex: 'male',
+        location: [0.252, 28.251],
+        // not_answer question
+        responding_for: "somebody_else",
+        asked_permission: true,
+      }));
     })
 
     it('does error for conditional questions with conditions met', () => {
@@ -132,6 +141,7 @@ describe('validate(name, data)', () => {
         symptoms: ['cough'],
         sex: 'male',
         location: [0.252, 28.251],
+        responding_for: "self",
         asked_permission: true,
       };
 
@@ -146,6 +156,7 @@ describe('validate(name, data)', () => {
         symptoms: ['cough'],
         sex: 'non-binary',
         location: [0.252, 28.251],
+        responding_for: "self",
         asked_permission: true,
       };
 
@@ -169,6 +180,7 @@ describe('validate(name, data)', () => {
       symptoms: ['cough'],
       non_existant: 'value',
       location: [0.252, 28.251],
+      responding_for: "self",
       asked_permission: true,
     };
 

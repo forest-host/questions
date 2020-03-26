@@ -30,7 +30,7 @@ const conditions_met = function(questions, question_name, data) {
       if(condition.hasOwnProperty('answer')) {
         condition_met = data[condition.question] == condition.answer;
       } else if(condition.hasOwnProperty('not_answer')) {
-        condition_met = data[condition.question] != condition.answer;
+        condition_met = data[condition.question] != condition.not_answer;
       }
 
       return all_met && condition_met;

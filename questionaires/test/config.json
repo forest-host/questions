@@ -15,11 +15,25 @@
           "type": "coordinates",
           "required": true
         },
+        "responding_for": {
+          "type": "select",
+          "required": true,
+          "options": [
+            "self",
+            "somebody_close",
+            "somebody_else"
+          ]
+        },
         "asked_permission": {
           "type": "boolean",
-          "variant": "checkbox",
           "required": true,
-          "required_answer": true
+          "required_answer": true,
+          "conditions": [
+            {
+              "question": "responding_for",
+              "not_answer": "self"
+            }
+          ]
         },
         "sex": {
           "type": "select",
