@@ -86,7 +86,11 @@
       "question": "Hoe vaak per dag verlaat jij je huis?"
     },
     "travel_last_weeks": {
-      "question": "Waar ben je geweest afgelopen weken?"
+      "question": "Ben jij de afgelopen twee weken in het buitenland geweest? Zo ja, waarheen?",
+        "answer": "Selecteer land waar je bent geweest"
+  },
+  "placeholder": "Zoek je land"
+} (edited) 
     }
   }
 }
