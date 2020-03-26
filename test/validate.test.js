@@ -141,6 +141,28 @@ describe('validate(name, data)', () => {
       }
     });
 
+    it('errors for disposabe email domain', () => {
+      let data = {
+        year_of_birth: 1992,
+        email: 'gnorsk@mailinator.com',
+        symptoms: ['cough'],
+        sex: 'male',
+        location: [0.252, 28.251],
+        responding_for: "self",
+      };
+
+      let callback = () => questions.validate(questionaire, data);
+
+
+      assert.throws(callback, questions.ValidationError);
+
+      try {
+        callback();
+      } catch(err) {
+        assert.propertyVal(err.questions, 'email', 'invalid_email');
+      }
+    });
+
     it('does not error for valid emailaddress', () => {
       let data = {
         year_of_birth: 1992,
