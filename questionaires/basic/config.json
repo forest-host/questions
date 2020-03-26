@@ -130,7 +130,11 @@
             "chills",
             "nauseous"
           ]
-        },
+        }
+      }
+    },
+    "social": {
+      "questions": {
         "contact_with_positively_tested_person": {
           "type": "boolean"
         },
