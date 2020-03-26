@@ -4,7 +4,7 @@
     "identity": {
       "recurring": false,
       "questions": {
-        "year_of_birth": {
+        "year_of_birth": { // De eerste vraag ontbreekt: vul je in voor a) jezelf b) iemand uit mijn huishouden, C) een ander.
           "type": "integer",
           "variant": "year",
           "required": true,
