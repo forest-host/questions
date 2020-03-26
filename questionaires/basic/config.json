@@ -14,7 +14,7 @@
         "sex": {
           "type": "select",
           "other": true,
-          "options": [ "male", "female", "Other", "I don't want to share" ]
+          "options": { "male", "female", "Other", "I don't want to share" }
         }
       }
     },
