@@ -4,6 +4,41 @@
     "identity": {
       "recurring": false,
       "questions": {
+        "responding_for": {
+          "type": "select",
+          "required": true,
+          "options": [
+            "self",
+            "somebody_close",
+            "somebody_else"
+          ]
+        },
+        "asked_permission": {
+          "type": "boolean",
+          "variant": "checkbox",
+          "required": true,
+          "conditions": [
+            {
+              "question": "responding_for",
+              "not_answer": "self"
+            }
+          ]
+        },
+        "observes_regulations": {
+          "type": "boolean",
+          "variant": "checkbox",
+          "required": true,
+          "conditions": [
+            {
+              "question": "responding_for",
+              "not_answer": "self"
+            }
+          ]
+        },
+        "location": {
+          "type": "coordinates",
+          "required": true
+        },
         "year_of_birth": { 
           "type": "integer",
           "variant": "year",
