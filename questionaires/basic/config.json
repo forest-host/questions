@@ -71,10 +71,10 @@
         "other_symptoms": {
           "type": "text"
         },
-        "start_symptoms": { // Dit is geen datum meer maar aantal dagen. "hoeveel dagen geleden dat je symptomen begonnen". Zal moeten berekend worden door datetoday-dagen=datum eerste symptoom.
+        "start_symptoms": {
           "type": "date"
         },
-        "first_symptom": { // Dit is een multi-select vraag geworden.
+        "first_symptom": {
           "type": "text"
         },
         "contact_with_positively_tested_person": {
@@ -83,7 +83,7 @@
         "quarantined": {
           "type": "boolean"
         },
-        "social_distancing": { // Opties voor antwoorden hier is multiple choice: Ja, zoveel mogelijk beperkt; soms; Nee; weet ik niet.
+        "social_distancing": {
           "type": "boolean"
         },
         "home_leaves": {
