@@ -32,7 +32,10 @@
     },
     "year_of_birth": {
       "question": "In welk jaar ben je geboren",
-      "tooltip": "Gewoon hoe oud je bent"
+      "tooltip": {
+        "question": "Wat voer ik hier in?",
+        "answer": "Gewoon hoe oud je bent"
+      }
     },
     "sex": {
       "question": "Wat is je geslacht",

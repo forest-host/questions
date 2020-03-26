@@ -12,6 +12,9 @@ Look in the defaults config file for a list of current/supported defaults.
 #### required
 You can add `required: true` to a question to make it required
 
+#### required_answer
+You can add `required_answer: <answer>` to inputs (all but multiselect & coordinates) to force user to enter a specific answer. This is currently used for forced checkboxes.
+
 #### other
 You can add `other: true` to a question to enable submission of string input instead of the questions type based data
 
@@ -37,6 +40,9 @@ For convenience we also support the `not_answer` key.
 
 ## Types & variants config
 Types define the type of answers (boolean, string, etc). Variants define a variant of a input and enable you to set some defaults for variant only.
+
+#### coordinates
+An array with length 2 containing 2 floats (latitude & longitude)
 
 #### bool
 A boolean is true or false, `filter` can be passed to indicate that we want to be able to filter by this datapoint
@@ -140,6 +146,10 @@ For questions, the question and answers can be translated
 - `answers`: translate the question tags here
 - `skip`: if question is not required, translate the skip button
 - `other`: translate the "other" option, allowing respondent to input string
+- `placeholder`: placeholder for inputs
+- `tooltip`
+  - `question`: question for tooltip
+  - `answer`: actual tooltip description
 
 A translation of a question would look like this:
 ```
