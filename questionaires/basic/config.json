@@ -152,6 +152,10 @@
         "travel_last_weeks": {
           "type": "multiselect",
           "variant": "country"
+        },
+        "email": {
+          "type": "email",
+          "required": true
         }
       }
     }

@@ -122,6 +122,13 @@
     "travel_last_weeks": {
       "question": "Ben jij de afgelopen twee weken in het buitenland geweest? Zo ja, waarheen?",
       "answer": "Selecteer land waar je bent geweest"
+    },
+    "email": {
+      "question": "Dan nog een laatste vraag. Wat is je e-mailadres?",
+      "tooltip": {
+        "question": "Waarom moet ik mijn e-mailadres achterlaten?",
+        "answer": "Je e-mailadres gebruiken we alleen om je een link te sturen waarmee je je antwoorden kunt aanpassen of je beter kunt melden. We slaan je e-mailadres niet op."
+      }
     }
   }
 }
