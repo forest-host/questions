@@ -87,6 +87,7 @@ const get_errors = function(questions, data) {
         return { ...errors, [question_name]: 'required' };
       }
 
+      // Required answer can be passed to force answer (used for required checkboxes)
       if(question.hasOwnProperty('required_answer') 
         && ( ! data.hasOwnProperty(question_name) || data[question_name] !== question.required_answer))
       {

@@ -61,12 +61,28 @@ describe('validate(name, data)', () => {
     })
   })
 
+  describe('required_answer', () => {
+    it('errors for answers that differ from required_answer', () => {
+      let data = {
+        asked_permission: false,
+      };
+
+      try {
+        questions.validate(questionaire, data);
+      } catch(err) {
+        assert.propertyVal(err.questions, 'asked_permission', 'required_answer');
+      }
+    })
+  })
+
   describe('conditions', () => {
     it('does not error for conditional questions without met conditions', () => {
       let data = {
         year_of_birth: 1992,
         symptoms: ['cough'],
         sex: 'male',
+        location: [0.252, 152.251],
+        asked_permission: true,
       };
 
       assert.doesNotThrow(() => questions.validate(questionaire, data));
@@ -115,6 +131,8 @@ describe('validate(name, data)', () => {
         year_of_birth: 1923,
         symptoms: ['cough'],
         sex: 'male',
+        location: [0.252, 152.251],
+        asked_permission: true,
       };
 
       assert.doesNotThrow(() => questions.validate(questionaire, data));
@@ -127,6 +145,8 @@ describe('validate(name, data)', () => {
         year_of_birth: 1923,
         symptoms: ['cough'],
         sex: 'non-binary',
+        location: [0.252, 152.251],
+        asked_permission: true,
       };
 
       assert.doesNotThrow(() => questions.validate(questionaire, data));
@@ -148,10 +168,11 @@ describe('validate(name, data)', () => {
       sex: 'non-binary',
       symptoms: ['cough'],
       non_existant: 'value',
+      location: [0.252, 152.251],
+      asked_permission: true,
     };
 
     let clean = questions.validate(questionaire, data);
-
     assert.notProperty(clean, 'non_existant');
   })
 })
