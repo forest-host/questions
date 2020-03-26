@@ -2,6 +2,12 @@
   "groups": {
     "symptoms": {
       "title": "Wat zijn je symptomen"
+    },
+    "identity": {
+      "title": "Over jou"
+    },
+    "social": {
+      "title": "Contact met de buitenwereld"
     }
   },
   "questions": {
