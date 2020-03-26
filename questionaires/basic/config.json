@@ -85,12 +85,13 @@
             "dry_cough",
             "fatigue",
             "cough_slime",
-            "short_breath',
+            "short_breath",
             "muscle_ache",
             "sore_throat",
             "headache",
             "chills",
             "nauseous"
+          ]
         },
         "contact_with_positively_tested_person": {
           "type": "boolean"
