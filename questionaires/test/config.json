@@ -40,6 +40,10 @@
           "other": true,
           "required": true,
           "options": [ "male", "female" ]
+        },
+        "email": {
+          "type": "email",
+          "required": true
         }
       }
     },

@@ -56,6 +56,9 @@ export const is_answer = function(question, answer) {
       }, true);
     case 'date':
       return typeof(answer) == 'date';
+    case 'email':
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(answer).toLowerCase());
     case 'coordinates':
       // Is array of 2 coords
       return Array.isArray(answer) 
