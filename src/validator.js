@@ -61,7 +61,10 @@ export const is_answer = function(question, answer) {
       return Array.isArray(answer) 
         && answer.length == 2 
         && typeof(answer[0]) === 'number'
-        && typeof(answer[1]) === 'number';
+        && typeof(answer[1]) === 'number'
+        // Is actually a coord
+        && answer[0] <= 180 && answer[0] >= -180
+        && answer[1] <= 90 && answer[1] >= -90
   }
 }
 

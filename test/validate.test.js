@@ -81,7 +81,7 @@ describe('validate(name, data)', () => {
         year_of_birth: 1992,
         symptoms: ['cough'],
         sex: 'male',
-        location: [0.252, 152.251],
+        location: [0.252, 28.251],
         asked_permission: true,
       };
 
@@ -131,7 +131,7 @@ describe('validate(name, data)', () => {
         year_of_birth: 1923,
         symptoms: ['cough'],
         sex: 'male',
-        location: [0.252, 152.251],
+        location: [0.252, 28.251],
         asked_permission: true,
       };
 
@@ -145,7 +145,7 @@ describe('validate(name, data)', () => {
         year_of_birth: 1923,
         symptoms: ['cough'],
         sex: 'non-binary',
-        location: [0.252, 152.251],
+        location: [0.252, 28.251],
         asked_permission: true,
       };
 
@@ -168,7 +168,7 @@ describe('validate(name, data)', () => {
       sex: 'non-binary',
       symptoms: ['cough'],
       non_existant: 'value',
-      location: [0.252, 152.251],
+      location: [0.252, 28.251],
       asked_permission: true,
     };
 
