@@ -57,7 +57,8 @@
       "tooltip": {
         "question": "Wat is koorts?",
         "answer": "Als de temperatuur van uw lichaam 38 graden of hoger is."
-    },
+      }
+     },
     "fever_degrees": {
       "question": "Hoeveel graden?"
     },
