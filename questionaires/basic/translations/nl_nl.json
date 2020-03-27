@@ -169,8 +169,7 @@
       "options": {
         "yes": "Ja, ik heb mijn sociale contacten zo veel mogelijk beperkt",
         "sometimes": "Soms, ik ben iets gaan minderen",
-        "no": "Nee, ik blijf vrienden en familie gewoon zien",
-        "dont_know": "Weet ik niet"
+        "no": "Nee, ik blijf vrienden en familie gewoon zien"
       }
     },
     "home_leaves": {
