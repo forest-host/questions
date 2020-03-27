@@ -57,6 +57,7 @@ describe('get_questionaire_locales(name)', () => {
   })
 })
 
+// TODO - Submit button
 describe('get_questionaire_translations(name, locale)', () => {
   it('should return translations merged with defaults', () => {
     let translations = symptotrack.get_questionaire_translations('basic', 'nl_nl');
