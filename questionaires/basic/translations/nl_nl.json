@@ -53,38 +53,68 @@
       }
     },
     "fever": {
-      "question": "Heb je koorts?"
+      "question": "Heb je koorts?",
+      "tooltip": {
+        "question": "Wat is koorts?",
+        "answer": "Als de temperatuur van uw lichaam 38 graden of hoger is."
     },
     "fever_degrees": {
       "question": "Hoeveel graden?"
     },
     "dry_cough": {
       "question": "Heb je last van een droge hoest?",
-      "skip": "weet ik niet"
+      "skip": "weet ik niet",
+       "tooltip": {
+        "question": "Wat is een droge hoest?",
+        "answer": "Droge hoest is een soort hoest waarbij geen slijm of speeksel wordt geproduceerd. Deze vorm van hoest wordt ook wel kriebelhoest of prikkelhoest genoemd."
     },
     "fatigue": {
-      "question": "Voel je je vermoeid"
+      "question": "Voel je je vermoeid",
+      "tooltip": {
+        "question": "Wanneer voel ik mij vermoeid?",
+        "answer": "Vermoeidheid kan betekenen dat alledaagse bezigheden meer energie kosten dan normaal. Denk daarbij aan de vaatwasser inruimen, je aankleden of de trap op lopen."
     },
     "cough_slime": {
-      "question": "En als je hoest, hoest je dan slijm op?"
+      "question": "En als je hoest, hoest je dan slijm op?",
+       "tooltip": {
+        "question": "Wat betekent slijm ophoesten? ,
+        "answer": "Slijmhoest is een vorm van hoesten waarbij het slijm in je keel door een hoestbui naar boven komt. Deze vorm van hoesten wordt ook wel vastzittende hoest genoemd."
     },
     "short_breath": {
-      "question": "Heb je last van kortademigheid?"
+      "question": "Heb je last van kortademigheid?",
+      "tooltip": {
+        "question": "Wat is kortademigheid? ",
+        "answer": "Een gevoel van beklemmende of moeizame ademhaling bij geen of lichte inspanning."
     },
     "muscle_ache": {
-      "question": "Heb je pijn in je spieren of gewrichten?"
+      "question": "Heb je pijn in je spieren of gewrichten?",
+      "tooltip": {
+        "question": "Wat betekent dit?",
+        "answer": "Een gevoel van lichte tot zware spierpijn zoals na het sporten, of pijn en minder mobiliteit in je gewrichten door opzwellen."
     },
     "sore_throat": {
-      "question": "Heb je last van keelpijn?"
+      "question": "Heb je last van keelpijn?",
+      "tooltip": {
+        "question": "Wat is keelpijn?",
+        "answer": "Pijn bij het slikken en/of gevoelige en opgezette klieren in de hals."
     },
     "headache": {
-      "question": "Heb je last van hoofdpijn?"
+      "question": "Heb je last van hoofdpijn?",
+      "tooltip": {
+        "question": "Wat is hoofdpijn?",
+        "answer": "Pijn gelokaliseerd in en om het hoofd."
     },
     "chills": {
-      "question": "En, Heb je last van een koude rillingen?"
+      "question": "En, Heb je last van een koude rillingen?",
+      "tooltip": {
+        "question": "Wat zijn koude rillingen??",
+        "answer": "Het gevoel van kippenvel gepaard met onwillekeurig en oncontroleerbaar schudden van de spieren."
     },
     "nauseous": {
-      "question": "Voel je je misselijk of heb je overgegeven?"
+      "question": "Voel je je misselijk of heb je overgegeven?",
+      "tooltip": {
+        "question": "Wat bedoel je hiermee",
+        "answer": "Het gevoel van misselijkheid, dit kan bijvoorbeeld optreden wanneer je eten ziet of anderen ziet eten. Wanneer de misselijkheid zich verergert kan dit leiden tot overgeven of braken."
     },
     "other_symptoms": {
       "question": "Zijn er nog meer symptomen die je ervaart?"
@@ -113,7 +143,10 @@
       "question": "Heb je contact gehad met iemand die positief is getest op corona?"
     },
     "quarantined": {
-      "question": "Ben jij (vrijwillig) in thuisquarantaine?"
+      "question": "Ben jij (vrijwillig) in thuisquarantaine?",
+       "tooltip": {
+        "question": "Wanneer ben ik in thuisquarantaine?",
+        "answer": "We spreken van thuisquarantaine als iemand die niet getest is op COVID-19 thuis moet blijven i.v.m. mogelijke besmetting of bij vertoon van symptomen. Dit betekent dat je helemaal niet meer de deur uit gaat."
     },
     "social_distancing": {
       "question": "Beperk jij je sociale contacten?",
