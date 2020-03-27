@@ -41,7 +41,7 @@
           "type": "coordinates",
           "required": true
         },
-        "year_of_birth": { 
+        "year_of_birth": {
           "type": "integer",
           "variant": "year",
           "required": true,
