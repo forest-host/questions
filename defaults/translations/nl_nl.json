@@ -3,6 +3,8 @@
     "required": "Dit veld is verplicht",
     "required_answer": "Antwoord met %s",
     "out_of_bounds": "Voer een waarde in tussen %d en %d",
+    "options_to_few": "Selecteer minder dan %d opties",
+    "options_to_many": "Selecteer meer dan %d opties",
     "invalid_integer": "Ongeldige waarde",
     "invalid_float": "Ongeldige waarde",
     "invalid_text": "Ongeldige waarde",

@@ -121,12 +121,20 @@ const get_errors = function(questions, data) {
             if(answer < question.min || answer > question.max) {
               return { ... errors, [question_name]: 'out_of_bounds' };
             };
+            break;
+          case 'multiselect':
+            if(question.hasOwnProperty('min_options') && answer.length < question.min_options) {
+              return { ... errors, [question_name]: 'options_to_few' };
+            }
+            if(question.hasOwnProperty('max_options') && answer.length > question.max_options) {
+              return { ... errors, [question_name]: 'options_to_many' };
+            }
+            break;
         };
       }
     }
 
     return errors;
-
   }, {});
 }
 

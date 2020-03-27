@@ -118,6 +118,8 @@
         },
         "first_symptom": {
           "type": "multiselect",
+          "min_options": 0,
+          "max_options": 2,
           "options": [
             "fever",
             "dry_cough",
