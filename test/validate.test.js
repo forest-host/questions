@@ -80,6 +80,7 @@ describe('validate(name, data)', () => {
     it('does not error for conditional questions without met conditions', () => {
       assert.doesNotThrow(() => questions.validate(questionaire, {
         year_of_birth: 1992,
+        email: 'hello@forest.host',
         symptoms: ['cough'],
         sex: 'male',
         location: [0.252, 28.251],
@@ -88,6 +89,7 @@ describe('validate(name, data)', () => {
 
       assert.doesNotThrow(() => questions.validate(questionaire, {
         year_of_birth: 1992,
+        email: 'hello@forest.host',
         symptoms: ['cough'],
         sex: 'male',
         location: [0.252, 28.251],
@@ -116,6 +118,65 @@ describe('validate(name, data)', () => {
     })
   })
 
+  describe('email', () => {
+    it('errors for invalid email address', () => {
+      let data = {
+        year_of_birth: 1992,
+        email: 'gnorsk',
+        symptoms: ['cough'],
+        sex: 'male',
+        location: [0.252, 28.251],
+        responding_for: "self",
+      };
+
+      let callback = () => questions.validate(questionaire, data);
+
+
+      assert.throws(callback, questions.ValidationError);
+
+      try {
+        callback();
+      } catch(err) {
+        assert.propertyVal(err.questions, 'email', 'invalid_email');
+      }
+    });
+
+    it('errors for disposabe email domain', () => {
+      let data = {
+        year_of_birth: 1992,
+        email: 'gnorsk@mailinator.com',
+        symptoms: ['cough'],
+        sex: 'male',
+        location: [0.252, 28.251],
+        responding_for: "self",
+      };
+
+      let callback = () => questions.validate(questionaire, data);
+
+
+      assert.throws(callback, questions.ValidationError);
+
+      try {
+        callback();
+      } catch(err) {
+        assert.propertyVal(err.questions, 'email', 'invalid_email');
+      }
+    });
+
+    it('does not error for valid emailaddress', () => {
+      let data = {
+        year_of_birth: 1992,
+        email: 'hello@forest.host',
+        symptoms: ['cough'],
+        sex: 'male',
+        location: [0.252, 28.251],
+        responding_for: "self",
+      };
+
+      assert.doesNotThrow(() => questions.validate(questionaire, data));
+    })
+  })
+
   describe('min/max', () => {
     it('errors for out of bounds input', () => {
       let data = {
@@ -138,6 +199,7 @@ describe('validate(name, data)', () => {
     it('does not error for in bounds input', () => {
       let data = {
         year_of_birth: 1923,
+        email: 'hello@forest.host',
         symptoms: ['cough'],
         sex: 'male',
         location: [0.252, 28.251],
@@ -153,6 +215,7 @@ describe('validate(name, data)', () => {
     it('allows string input instead of question type for `other` config', () => {
       let data = {
         year_of_birth: 1923,
+        email: 'hello@forest.host',
         symptoms: ['cough'],
         sex: 'non-binary',
         location: [0.252, 28.251],
@@ -176,6 +239,7 @@ describe('validate(name, data)', () => {
   it('strips questions that are not part of questionaire when returning valid data', () => {
     let data = {
       year_of_birth: 1923,
+      email: 'hello@forest.host',
       sex: 'non-binary',
       symptoms: ['cough'],
       non_existant: 'value',

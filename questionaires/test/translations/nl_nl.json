@@ -20,6 +20,9 @@
         "male": "Man",
         "female": "Vrouw"
       }
+    },
+    "email": {
+      "question": "Wat is je email?"
     }
   }
 }

@@ -41,7 +41,7 @@
           "type": "coordinates",
           "required": true
         },
-        "year_of_birth": { 
+        "year_of_birth": {
           "type": "integer",
           "variant": "year",
           "required": true,
@@ -112,9 +112,9 @@
         "start_symptoms": {
           "type": "integer",
           "variant": "days",
-          "required": true,
+          "required": false,
           "min": 0,
-          "max": 15 
+          "max": 15
         },
         "first_symptom": {
           "type": "multiselect",
@@ -143,8 +143,9 @@
         },
         "social_distancing": {
           "type": "select",
-          "other": true,
-          "options": [ "Yes", "Sometimes", "No" ]
+          "variant": "radio",
+          "required": true,
+          "options": [ "yes", "sometimes", "no", "dont_know" ]
         },
         "home_leaves": {
           "type": "integer"
@@ -152,6 +153,16 @@
         "travel_last_weeks": {
           "type": "multiselect",
           "variant": "country"
+        },
+        "email": {
+          "type": "email",
+          "required": true
+        },
+        "terms_and_conditions": {
+          "type": "boolean",
+          "variant": "checkbox",
+          "required": true,
+          "required_answer": true
         }
       }
     }

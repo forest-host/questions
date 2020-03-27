@@ -1,5 +1,7 @@
 
 import * as symptotrack from './';
+import disposabe_domains from 'disposable-email-domains';
+import disposabe_wildcards from 'disposable-email-domains/wildcard';
 
 export class ValidationError extends Error {
   constructor(questions) {
@@ -56,6 +58,12 @@ export const is_answer = function(question, answer) {
       }, true);
     case 'date':
       return typeof(answer) == 'date';
+    case 'email':
+      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      let domain = answer.substring(answer.lastIndexOf('@') +1);
+      return re.test(String(answer).toLowerCase())
+        && disposabe_domains.indexOf(answer.substring(domain)) === -1
+        && !disposabe_wildcards.some(d => domain.includes(d));
     case 'coordinates':
       // Is array of 2 coords
       return Array.isArray(answer) 
