@@ -114,7 +114,7 @@
           "variant": "days",
           "required": true,
           "min": 0,
-          "max": 15 
+          "max": 15
         },
         "first_symptom": {
           "type": "multiselect",
@@ -143,8 +143,7 @@
         },
         "social_distancing": {
           "type": "select",
-          "other": true,
-          "options": [ "Yes", "Sometimes", "No" ]
+          "options": [ "yes", "sometimes", "no", "dont_know" ]
         },
         "home_leaves": {
           "type": "integer"

@@ -114,7 +114,17 @@
       "question": "Ben jij (vrijwillig) in thuisquarantaine?"
     },
     "social_distancing": {
-      "question": "Beperk jij je sociale contacten?"
+      "question": "Beperk jij je sociale contacten?",
+      "tooltip": {
+        "question": "Wanneer doe ik dat precies?",
+        "answer": "Blijf jij uit voorzorg thuis om besmetting van jezelf en anderen te voorkomen? Ben je gestopt met het bezoeken van ouderen? En beperk jij jouw sociale contact met vrienden tot bijv. een Skype-borrel?  Dan beperk jij jouw sociale contacten. Dit wordt ook wel social-distancing genoemd."
+      },
+      "options": {
+        "yes": "Ja, ik heb mijn sociale contacten zo veel mogelijk beperkt",
+        "sometimes": "Soms, ik ben iets gaan minderen",
+        "no": "Nee, ik blijf vrienden en familie gewoon zien",
+        "dont_know": "Weet ik niet"
+      }
     },
     "home_leaves": {
       "question": "Hoe vaak per dag verlaat jij je huis?"
