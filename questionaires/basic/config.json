@@ -143,6 +143,8 @@
         },
         "social_distancing": {
           "type": "select",
+          "variant": "radio",
+          "required": true,
           "options": [ "yes", "sometimes", "no", "dont_know" ]
         },
         "home_leaves": {
