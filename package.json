@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suprasoil/questions.git"
+    "url": "git+https://github.com/forest-official/questions.git"
   },
   "scripts": {
     "test": "NODE_ENV=testing mocha --require @babel/register --full-trace test/**/*.test.js",
@@ -20,9 +20,9 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/suprasoil/questions/issues"
+    "url": "https://github.com/forest-official/questions/issues"
   },
-  "homepage": "https://github.com/suprasoil/questions#readme",
+  "homepage": "https://github.com/forest-official/questions#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
