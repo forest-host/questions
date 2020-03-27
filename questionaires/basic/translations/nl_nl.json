@@ -90,7 +90,9 @@
       "question": "Zijn er nog meer symptomen die je ervaart?"
     },
     "start_symptoms": {
-      "question": "En weet je nog toevallig wanneer de symptomen zijn begonnen?"
+      "question": "En weet je nog toevallig wanneer de symptomen zijn begonnen?",
+      "placeholder": "dagen geleden",
+      "skip": "weet ik niet"
     },
     "first_symptom": {
       "question": "Welk symptoom ontdekte je als eerste?",
@@ -138,6 +140,13 @@
       "tooltip": {
         "question": "Waarom moet ik mijn e-mailadres achterlaten?",
         "answer": "Je e-mailadres gebruiken we alleen om je een link te sturen waarmee je je antwoorden kunt aanpassen of je beter kunt melden. We slaan je e-mailadres niet op."
+      }
+    },
+    "terms_and_conditions": {
+      "question": "Ik ga akkoord met de privacy condities",
+      "options": {
+        "true": "Ja",
+        "false": "Nee"
       }
     }
   }

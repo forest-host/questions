@@ -112,7 +112,7 @@
         "start_symptoms": {
           "type": "integer",
           "variant": "days",
-          "required": true,
+          "required": false,
           "min": 0,
           "max": 15
         },
@@ -155,6 +155,12 @@
         "email": {
           "type": "email",
           "required": true
+        },
+        "terms_and_conditions": {
+          "type": "boolean",
+          "variant": "checkbox",
+          "required": true,
+          "required_answer": true
         }
       }
     }
