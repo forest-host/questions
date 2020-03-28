@@ -43,16 +43,12 @@
       }
     },
     "year_of_birth": {
-      "question": "In welk jaar ben je geboren",
-      "tooltip": {
-        "question": "Wat voer ik hier in?",
-        "answer": "Gewoon hoe oud je bent"
-      }
+      "question": "In welk jaar ben je geboren"
     },
     "sex": {
       "question": "Wat is je geslacht",
       "other": "Anders",
-      "skip": "Wil ik niet zeggen",
+      "skip": "Zeg ik liever niet",
       "options": {
         "male": "Man",
         "female": "Vrouw"
@@ -62,7 +58,7 @@
       "question": "Heb je koorts?",
       "tooltip": {
         "question": "Wat is koorts?",
-        "answer": "Als de temperatuur van uw lichaam 38 graden of hoger is."
+        "answer": "Als de temperatuur van je lichaam 38 graden of hoger is."
       }
      },
     "fever_degrees": {
@@ -70,14 +66,14 @@
     },
     "dry_cough": {
       "question": "Heb je last van een droge hoest?",
-      "skip": "weet ik niet",
+      "skip": "Weet ik niet",
        "tooltip": {
         "question": "Wat is een droge hoest?",
         "answer": "Droge hoest is een soort hoest waarbij geen slijm of speeksel wordt geproduceerd. Deze vorm van hoest wordt ook wel kriebelhoest of prikkelhoest genoemd."
        }
     },
     "fatigue": {
-      "question": "Voel je je vermoeid",
+      "question": "Voel je je vermoeid?",
       "tooltip": {
         "question": "Wanneer voel ik mij vermoeid?",
         "answer": "Vermoeidheid kan betekenen dat alledaagse bezigheden meer energie kosten dan normaal. Denk daarbij aan de vaatwasser inruimen, je aankleden of de trap op lopen."
@@ -119,7 +115,7 @@
       }
     },
     "chills": {
-      "question": "En, Heb je last van een koude rillingen?",
+      "question": "En, heb je last van een koude rillingen?",
       "tooltip": {
         "question": "Wat zijn koude rillingen??",
         "answer": "Het gevoel van kippenvel gepaard met onwillekeurig en oncontroleerbaar schudden van de spieren."
@@ -137,8 +133,7 @@
       "placeholder": "Typ hier je symptomen"
     },
     "start_symptoms": {
-      "question": "En weet je nog toevallig wanneer de symptomen zijn begonnen?",
-      "placeholder": "dagen geleden",
+      "question": "Hoeveel dagen geleden zijn je symptomen begonnen?",
       "skip": "Nee, weet ik niet"
     },
     "first_symptom": {
@@ -180,7 +175,8 @@
       }
     },
     "home_leaves": {
-      "question": "Hoe vaak per dag verlaat jij je huis?"
+      "question": "Hoe vaak per dag verlaat jij je huis?",
+      "placeholder": "keer"
     },
     "travel_last_weeks": {
       "question": "Ben jij de afgelopen twee weken in het buitenland geweest? Zo ja, waarheen?",
