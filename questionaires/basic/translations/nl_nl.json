@@ -36,7 +36,11 @@
     },
     "location": {
       "question": "Waar ben je nu?",
-      "placeholder": "Zoek locatie"
+      "placeholder": "Zoek op postcode, straat of plaatsnaam",
+      "tooltip": {
+        "question": "Wat gebeurt er met mijn adresgegevens?",
+        "answer": "Om in kaart te brengen waar in Nederland de mensen met symptomen zitten moet informatie worden verzameld over waar jij je bevindt. Maar deze informatie hoeft niet exact te zijn. Je GPS coördinaten worden daarom alleen op 2 cijfers achter de komma geregistreerd. Dat betekend dat je locatie op 1km nauwkeurig is en daarmee niet op jou of je huis te herleiden is."
+      }
     },
     "year_of_birth": {
       "question": "In welk jaar ben je geboren",
