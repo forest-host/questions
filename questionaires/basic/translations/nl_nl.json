@@ -35,7 +35,7 @@
       }
     },
     "location": {
-      "question": "Waar ben je nu?",
+      "question": "Waar bevind je je momenteel?",
       "placeholder": "Zoek op postcode, straat of plaatsnaam",
       "tooltip": {
         "question": "Wat gebeurt er met mijn adresgegevens?",
@@ -43,10 +43,10 @@
       }
     },
     "year_of_birth": {
-      "question": "In welk jaar ben je geboren"
+      "question": "In welk jaar ben je geboren?"
     },
     "sex": {
-      "question": "Wat is je geslacht",
+      "question": "Wat is je geslacht?",
       "other": "Anders",
       "skip": "Zeg ik liever niet",
       "options": {
@@ -124,7 +124,7 @@
     "nauseous": {
       "question": "Voel je je misselijk of heb je overgegeven?",
       "tooltip": {
-        "question": "Wat bedoel je hiermee",
+        "question": "Wat bedoel je hiermee?",
         "answer": "Het gevoel van misselijkheid, dit kan bijvoorbeeld optreden wanneer je eten ziet of anderen ziet eten. Wanneer de misselijkheid zich verergert kan dit leiden tot overgeven of braken."
       }
     },
@@ -179,7 +179,7 @@
       "placeholder": "keer"
     },
     "travel_last_weeks": {
-      "question": "Ben jij de afgelopen twee weken in het buitenland geweest? Zo ja, waarheen?",
+      "question": "Ben jij in de afgelopen twee weken in het buitenland geweest? Zo ja, waarheen?",
       "answer": "Selecteer land waar je bent geweest"
     },
     "email": {
