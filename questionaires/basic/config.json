@@ -50,6 +50,7 @@
         },
         "sex": {
           "type": "select",
+          "skip": true,
           "other": true,
           "options": [ "male", "female" ]
         }
