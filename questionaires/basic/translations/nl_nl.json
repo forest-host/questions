@@ -21,16 +21,16 @@
       }
     },
     "asked_permission": {
-      "question": "Heb je toestemming gevraagd aan degene voor wie je de vragenlijst invult?",
+      "question": "Oké, je gaat nu voor iemand anders symptomen doorgeven. Heb je toestemming gevraagd aan degene waar je de vragenlijst voor invult?",
       "options": {
         "true": "Ja, ik heb toestemming gevraagd",
         "false": "Nee, hoezo?"
       }
     },
     "takes_precautions": {
-      "question": "Houd je afstand?",
+      "question": "Oké. Vergeet dan niet om rekening te houden met de voorschriften. Zorg ervoor dat je afstand houdt van mensen van symptomen. Loop bijvoorbeeld de vragenlijst door via de telefoon en stel diegene de volgende vragen...",
       "answers": {
-        "true": "Jazeker",
+        "true": "Ja, ik houd hier rekening mee.",
         "false": "Nee"
       }
     },
@@ -55,7 +55,7 @@
       }
     },
     "fever": {
-      "question": "Heb je koorts?",
+      "question": "Okay, we hebben genoeg informatie over jou. We gaan verder met de symptomen. Heb je koorts?",
       "tooltip": {
         "question": "Wat is koorts?",
         "answer": "Als de temperatuur van je lichaam 38 graden of hoger is."
@@ -153,7 +153,7 @@
       }
     },
     "contact_with_positively_tested_person": {
-      "question": "Heb je contact gehad met iemand die positief is getest op corona?"
+      "question": "Nog een paar vragen te gaan! Heb je contact gehad met iemand die positief is getest op corona?"
     },
     "quarantined": {
       "question": "Ben jij (vrijwillig) in thuisquarantaine?",
