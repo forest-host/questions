@@ -35,7 +35,8 @@
       }
     },
     "location": {
-      "question": "Waar ben je nu?"
+      "question": "Waar ben je nu?",
+      "placeholder": "Zoek locatie"
     },
     "year_of_birth": {
       "question": "In welk jaar ben je geboren",
@@ -128,17 +129,19 @@
       }
     },
     "other_symptoms": {
-      "question": "Zijn er nog meer symptomen die je ervaart?"
+      "question": "Zijn er nog meer symptomen die je ervaart?",
+      "placeholder": "Typ hier je symptomen"
     },
     "start_symptoms": {
       "question": "En weet je nog toevallig wanneer de symptomen zijn begonnen?",
       "placeholder": "dagen geleden",
-      "skip": "weet ik niet"
+      "skip": "Nee, weet ik niet"
     },
     "first_symptom": {
       "question": "Welk symptoom ontdekte je als eerste?",
+      "description": "Selecteer er maximaal 2. Weet je het niet meer zo goed? Dan hoef je niets te selecteren.",
       "options": {
-        "fever": "koorts",
+        "fever": "Koorts",
         "dry_cough": "Droge hoest",
         "fatigue": "Vermoeidheid",
         "cough_slime": "Slijm ophoesten",
