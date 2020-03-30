@@ -1,6 +1,6 @@
 {
   "name": "@symptotrack/questions",
-  "version": "0.6.26",
+  "version": "0.6.27",
   "description": "Questions for the symptomtracker",
   "main": "lib/index.js",
   "repository": {
