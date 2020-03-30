@@ -55,7 +55,7 @@
       }
     },
     "fever": {
-      "question": "Okay, we hebben genoeg informatie over jou. We gaan verder met de symptomen. Heb je koorts?",
+      "question": "Okay, we hebben genoeg informatie over jou.<br/><br/>We gaan verder met de symptomen. Heb je koorts?",
       "tooltip": {
         "question": "Wat is koorts?",
         "answer": "Als de temperatuur van je lichaam 38 graden of hoger is."
@@ -153,7 +153,7 @@
       }
     },
     "contact_with_positively_tested_person": {
-      "question": "Nog een paar vragen te gaan! Heb je contact gehad met iemand die positief is getest op corona?"
+      "question": "Nog een paar vragen te gaan!<br/><br />Heb je contact gehad met iemand die positief is getest op corona?"
     },
     "quarantined": {
       "question": "Ben jij (vrijwillig) in thuisquarantaine?",
