@@ -54,7 +54,7 @@ export const get_questionaire = function(name, only_recurring = false) {
     throw new Error('test questionaire can only be used in testing environments');
   }
 
-  // Clone config to not change globals, use clone & foreach instead of mapping everything as 
+  // Clone config to not change globals, use clone & foreach instead of mapping everything as
   // JSON is natively implemented in browsers/node and therefore more performant
   let config = JSON.parse(JSON.stringify(questionaires[name].config));
 
@@ -89,8 +89,8 @@ export const get_questionaire = function(name, only_recurring = false) {
         let type_config = defaults.config.types[question_config.type];
 
         // First add variant defaults
-        if(question_config.hasOwnProperty('variant') 
-          && type_config.hasOwnProperty('variants') 
+        if(question_config.hasOwnProperty('variant')
+          && type_config.hasOwnProperty('variants')
           && type_config.variants.hasOwnProperty(question_config.variant))
         {
           // Add variant config to question_config
@@ -158,9 +158,9 @@ export const get_questionaire_translations = function(questionaire_name, locale)
       let type_translations = default_translations.types[question_config.type];
 
       // First add variant defaults
-      if(question_config.hasOwnProperty('variant') 
-        && type_translations.hasOwnProperty('variants') 
-        && type_translations.variants.hasOwnProperty(question_config.variant)) 
+      if(question_config.hasOwnProperty('variant')
+        && type_translations.hasOwnProperty('variants')
+        && type_translations.variants.hasOwnProperty(question_config.variant))
       {
         let variant_translations = type_translations.variants[question_config.variant];
 

@@ -16,7 +16,8 @@
   "license": "ISC",
   "babel": {
     "plugins": [
-      "@babel/plugin-transform-modules-commonjs"
+      "@babel/plugin-transform-modules-commonjs",
+      "@babel/plugin-transform-arrow-functions"
     ]
   },
   "bugs": {
@@ -32,6 +33,7 @@
     "mocha": "^7.1.1"
   },
   "dependencies": {
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
     "disposable-email-domains": "^1.0.53",
     "require-dir": "^1.2.0"
   }
