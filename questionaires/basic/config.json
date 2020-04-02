@@ -86,25 +86,32 @@
           "filter": true
         },
         "cough_slime": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "short_breath": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "muscle_ache": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "sore_throat": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "headache": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "chills": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "nauseous": {
-          "type": "boolean"
+          "type": "boolean",
+          "required": true
         },
         "other_symptoms": {
           "type": "text",
