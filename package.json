@@ -18,7 +18,8 @@
     "plugins": [
       "@babel/plugin-transform-modules-commonjs",
       "@babel/plugin-transform-arrow-functions",
-      "@babel/plugin-transform-parameters"
+      "@babel/plugin-transform-parameters",
+      "@babel/plugin-proposal-class-properties"
     ]
   },
   "bugs": {
@@ -34,6 +35,7 @@
     "mocha": "^7.1.1"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-arrow-functions": "^7.8.3",
     "@babel/plugin-transform-parameters": "^7.9.3",
     "disposable-email-domains": "^1.0.53",
