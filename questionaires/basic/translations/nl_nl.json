@@ -193,7 +193,7 @@
       }
     },
     "terms_and_conditions": {
-      "question": "Ik ga ermee akkoord dat SymptoTrack mijn gegevens opslaat in overeenstemming met de privacyvoorwaarden.",
+      "question": "Ik ga ermee akkoord dat SymptoTrack mijn gegevens opslaat in overeenstemming met de <a href='https://www.symptotrack.org/privacyvoorwaarden' target='_blank'>privacyvoorwaarden</a>.",
       "options": {
         "true": "Ja",
         "false": "Nee"
