@@ -2,13 +2,13 @@
   "submit": "Insturen",
   "groups": {
     "symptoms": {
-      "title": "Wat zijn je symptomen"
+      "title": "Okay, we hebben genoeg informatie over jou. We gaan verder met de symptomen."
     },
     "identity": {
-      "title": "Over jou"
+      "title": "Beantwoord de volgende vragen om je symptomen te melden."
     },
     "social": {
-      "title": "Contact met de buitenwereld"
+      "title": "Nog een paar vragen te gaan!"
     }
   },
   "questions": {
@@ -55,7 +55,7 @@
       }
     },
     "fever": {
-      "question": "Okay, we hebben genoeg informatie over jou.<br/><br/>We gaan verder met de symptomen. Heb je koorts?",
+      "question": "Heb je koorts?",
       "tooltip": {
         "question": "Wat is koorts?",
         "answer": "Als de temperatuur van je lichaam 38 graden of hoger is."
@@ -153,7 +153,7 @@
       }
     },
     "contact_with_positively_tested_person": {
-      "question": "Nog een paar vragen te gaan!<br/><br />Heb je contact gehad met iemand die positief is getest op corona?"
+      "question": "Heb je contact gehad met iemand die positief is getest op corona?"
     },
     "quarantined": {
       "question": "Ben jij (vrijwillig) in thuisquarantaine?",
