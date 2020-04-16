@@ -1,0 +1,203 @@
+{
+  "submit": "Submit",
+  "groups": {
+    "symptoms": {
+      "title": "Okay, enough about you.  Let’s continue with the symptoms. Do you have a fever?"
+    },
+    "identity": {
+      "title": "Answer the following questions to register your symptoms."
+    },
+    "social": {
+      "title": "Just a few more questions to go!"
+    }
+  },
+  "questions": {
+    "responding_for": {
+      "question": "For whom are you completing this questionnaire?",
+      "options": {
+        "self": "Myself",
+        "somebody_close": "Someone who lives in my house",
+        "somebody_else": "Someone else"
+      }
+    },
+    "asked_permission": {
+      "question": "You have indicated that you are going to report symptoms for someone else. Have you asked permission from this person to fill out this questionnaire?",
+      "options": {
+        "true": "Yes, I’ve asked for permission.",
+        "false": "No, why?"
+      }
+    },
+    "takes_precautions": {
+      "question": "Okay. Do not forget to take federal guidelines into account. Be sure to keep your distance from  people with symptoms. For example, if you’re filling this out for someone else, go through the questionnaire by phone instead of sitting next to them.",
+      "answers": {
+        "true": "Yes, I am taking this into account.",
+        "false": "No"
+      }
+    },
+    "location": {
+      "question": "Please select the location where you currently live",
+      "placeholder": "Search using street, city or postalcode",
+      "tooltip": {
+        "question": "What happens to my location data?",
+        "answer": "To map the spread of people with symptoms of COVID-19, it is necessary to collect your location data. However, this information does not have to be exact. SymptoTrack saves your location data as a GPS coordinate up to 2 decimals.  This means that your location is accurate to 1.11km / 0.69 miles and therefore not traceable to you or your house."
+      }
+    },
+    "year_of_birth": {
+      "question": "What year were you born in?"
+    },
+    "sex": {
+      "question": "What is your gender?",
+      "other": "Other",
+      "skip": "I'd rather not say",
+      "options": {
+        "male": "Male",
+        "female": "Female"
+      }
+    },
+    "fever": {
+      "question": "Okay, enough about you.  Let’s continue with the symptoms. Do you have a fever?",
+      "tooltip": {
+        "question": "What is a fever?",
+        "answer": "When the temperature of your body is equal to or higher than 38 degrees Celsius / 100.4 Fahrenheit."
+      }
+     },
+    "fever_degrees": {
+      "question": "How many degrees?"
+    },
+    "dry_cough": {
+      "question": "Do you suffer from a dry cough?",
+      "skip": "I don't know",
+       "tooltip": {
+        "question": "What is a dry cough?",
+        "answer": "Dry cough” is a type of cough that does not produce mucus or saliva. This form of cough is also known as an itchy or tickly cough."
+       }
+    },
+    "fatigue": {
+      "question": "Do you suffer from fatigue?",
+      "tooltip": {
+        "question": "What is fatigue?",
+        "answer": "Fatigue is an extreme form of tiredness or exhaustion. It causes everyday activities to take more energy than usual. Think of loading the dishwasher, getting dressed or walking up the stairs."
+      }
+    },
+    "cough_slime": {
+      "question": "And when you cough, do you cough up thick mucus?",
+       "tooltip": {
+        "question": "How do I know I am coughing up thick mucus?",
+        "answer": "Coughing up a thick mucus is a form of cough in which the mucus in your throat comes up through a coughing fit. This form of coughing is also known as a stuck cough."
+       }
+    },
+    "short_breath": {
+      "question": "Do you experience shortness of breath?",
+      "tooltip": {
+        "question": "What is shortness of breath?",
+        "answer": "An intense tightening in the chest or difficulty breathing with little to no effort."
+      }
+    },
+    "muscle_ache": {
+      "question": "Do you have pain in your muscles or joints?",
+      "tooltip": {
+        "question": "What does this mean?",
+        "answer": "A feeling of mild to severe muscle pain after exercise, or pain and decreased mobility in your joints from bloatingWhat does this mean?"
+      }
+    },
+    "sore_throat": {
+      "question": "Do you have a sore throat?",
+      "tooltip": {
+        "question": "What is a sore throat?",
+        "answer": "Pain when swallowing and / or sensitive and swollen glands in the neck."
+      }
+    },
+    "headache": {
+      "question": "Do you have a headache?",
+      "tooltip": {
+        "question": "What’s a headache?",
+        "answer": "Pain localized in and around the head."
+      }
+    },
+    "chills": {
+      "question": "Do you experience chills?",
+      "tooltip": {
+        "question": "What are chills?",
+        "answer": "The feeling of goosebumps accompanied by involuntary and uncontrollable shaking of the muscles."
+      }
+    },
+    "nauseous": {
+      "question": "Do you feel nauseous or have you vomited?",
+      "tooltip": {
+        "question": "What do you mean?",
+        "answer": "When someone experiences nausea, they feel queasy, or like they’re going to vomit. Often, people who feel nauseous have a distaste for food or watching others eat. When the nausea worsens, it can lead to vomiting."
+      }
+    },
+    "other_symptoms": {
+      "question": "Are there any other symptoms you’re experiencing?",
+      "placeholder": "Enter your symptoms here"
+    },
+    "start_symptoms": {
+      "question": "How many days ago did your first symptoms start?",
+      "skip": "I don't remember"
+    },
+    "first_symptom": {
+      "question": "Which symptom did you discover first?",
+      "description": "You can select a maximum of 2 symptoms. You don’t have to select any symptoms if you don’t remember.",
+      "options": {
+        "fever": "Koorts",
+        "dry_cough": "Fever",
+        "fatigue": "Fatigue",
+        "cough_slime": "Coughing up mucus",
+        "short_breath": "Shortness of breath",
+        "muscle_ache": "Muscule/joint pain",
+        "sore_throat": "Sore throat",
+        "headache": "Headache",
+        "chills": "Chills",
+        "nauseous": "Vomiting"
+      }
+    },
+    "contact_with_positively_tested_person": {
+      "question": "Have you been in contact with someone who has tested positive for coronavirus?"
+    },
+    "quarantined": {
+      "question": "Do you (voluntarily) self-quarantine?",
+       "tooltip": {
+        "question": "What does “self-quarantine” mean?",
+        "answer": "Self-quarantine entails staying at home, limiting all social contact because of possible contamination or because you have developed symptoms of COVID-19. This means that you don't go out at all."
+       }
+    },
+    "social_distancing": {
+      "question": "Are you practicing social distancing?",
+      "tooltip": {
+        "question": "What does  “social distancing” mean?",
+        "answer": "Do you stay home as a precaution to prevent the contamination of yourself and others? Have you stopped visiting the elderly? And do you limit your social contact with friends? This means you practice social distancing."
+      },
+      "options": {
+        "yes": "Yes, I have practiced  social distancing as much as possible",
+        "sometimes": "I’ve limited my social interactions a bit",
+        "no": "No, I keep visiting friends and family"
+      }
+    },
+    "home_leaves": {
+      "question": "How many times a day do you leave your house?",
+      "placeholder": "times"
+    },
+    "travel_last_weeks": {
+      "question": "Have you been abroad in the past two weeks? If so, where to?",
+      "answer": "Select the country or countries"
+    },
+    "email": {
+      "question": "One last question. What is your email address?",
+      "description": "We only use your email address to send you a link with which you can adjust your answers or let us know when you’re feeling better. We do not store your email address.",
+      "placeholder": "Your email address",
+      "placeholder_confirm": "confirm your email address",
+      "tooltip": {
+        "question": "Why do I have to submit my email address?",
+        "answer": "We only use your email address to send you a link with which you can adjust your answers or let us know when you’re feeling better. We do not store your email address."
+      }
+    },
+    "terms_and_conditions": {
+      "question": "I agree that SymptoTrack will save my data in accordance with the privacy policy. <a href='https://www.symptotrack.org/privacyvoorwaarden' target='_blank'>privacyvoorwaarden</a>.",
+      "options": {
+        "true": "Yes, I agree",
+        "false": "No"
+      }
+    }
+  }
+}
